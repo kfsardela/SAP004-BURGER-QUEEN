@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import firebaseInit from './firebase'
 // import Button from './components/Button'
 
 function App() {
