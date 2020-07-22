@@ -19,7 +19,7 @@ export default function App() {
   return (
     <Router>
       <div>
-        <nav>
+        {/* <nav>
           <ul>
             <li>
               <Link to="/login">Login</Link>
@@ -37,7 +37,7 @@ export default function App() {
               <Link to="/orders">Pedidos prontos</Link>
             </li>
           </ul>
-        </nav>
+        </nav> */}
 
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
