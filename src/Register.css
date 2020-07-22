@@ -1,0 +1,52 @@
+body{
+    background-image: url("./img1.jpg");
+}
+
+.title-reg{
+    color: #EBBD47;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.select-reg{
+    display: flex;
+    justify-content: space-between;
+}
+
+select{
+    height: 40px;
+    width: 130px;
+    font-size: 15px;
+    border-radius: 20px;
+}
+
+.register{
+    background-color: #1c0c21d7;
+    box-shadow: 0 0 1em #F8688B;
+    color: white;
+    font-size: 30px;
+    margin: auto;
+    padding: 30px;
+    width: 600px;
+}
+
+.inputRegister{
+    border-radius:50px;
+    margin: 15px;
+    height: 30px;
+    width: 450px;
+}
+
+.btn-reg{
+    background-color: #F8688B;
+    color: black;
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    height: 40px;
+    margin: auto;
+    width: 150px;
+    border-radius: 50px;
+}
+

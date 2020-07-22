@@ -7,6 +7,19 @@
   pointer-events: none;
 }
 
+.input-login{
+  background-color: white;
+  border-radius: 50px;
+}
+
+.btn{
+  background-color: #F8688B !important;
+  border-radius: 50px !important;
+}
+.link-login{
+  color: #EBBD47 !important;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -27,6 +40,7 @@
 .App-link {
   color: #61dafb;
 }
+
 
 @keyframes App-logo-spin {
   from {

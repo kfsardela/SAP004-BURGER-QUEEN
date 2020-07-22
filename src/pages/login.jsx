@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
 
   },
   welcome: {
-color: 'white',
+  color: '#EBBD47',
   },
   paper: {
     margin: theme.spacing(8, 4),
@@ -45,9 +45,7 @@ color: 'white',
     width: '100%', // Fix IE 11 issue.
     marginTop: theme.spacing(1),
   },
-  submit: {
-    margin: theme.spacing(3, 0, 2),
-  },
+  
 }));
 
 export default function Login() {
@@ -64,24 +62,26 @@ export default function Login() {
             BEM VINDO AO BURGER QUEEN         
           </Typography>
           <form className={classes.form} noValidate>
-            <TextField
+            <TextField 
+              className= "input-login"
               variant="outlined"
               margin="normal"
               required
               fullWidth
               id="email"
-              label="Email Address"
+              label="Email"
               name="email"
               autoComplete="email"
               autoFocus
             />
             <TextField
+              className= "input-login"
               variant="outlined"
               margin="normal"
               required
               fullWidth
-              name="password"
-              label="Password"
+              name="Senha"
+              label="Senha"
               type="password"
               id="password"
               autoComplete="current-password"
@@ -91,23 +91,23 @@ export default function Login() {
               label="Remember me"
             />
             <Button
+              className= "btn"
               type="submit"
               fullWidth
               variant="contained"
               color="primary"
-              className={classes.submit}
             >
-              Sign In
+              Logar
             </Button>
             <Grid container>
               <Grid item xs>
-                <Link href="#" variant="body2">
-                  Forgot password?
+                <Link href="#" variant="body2" className= "link-login">
+                  Esqueceu a senha?
                 </Link>
               </Grid>
               <Grid item>
-                <Link href="#" variant="body2">
-                  {"Don't have an account? Sign Up"}
+                <Link href="#" variant="body2" className= "link-login">
+                  {"Não tem conta? Cadastre-se"}
                 </Link>
               </Grid>
             </Grid>
