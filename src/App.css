@@ -6,16 +6,59 @@
   height: 40vmin;
   pointer-events: none;
 }
+.welcome{
+  text-shadow: 5px 5px 10px #eb7b47;
+  color: #EBBD47;
+  margin-top: 140px !important;
+}
+
+.reg-img{
+  background-image: url("/images/img1.jpg");
+  width: 100vw;
+  height: 100vh;
+  padding-top: 160px;
+}
 
 .input-login{
   background-color: white;
   border-radius: 50px;
+  font-size: 15px;
+  height: 40px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.Reg-select{
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  width: 100%;
+}
+
+.select-option{
+  background-color: white;
+  border-radius: 30px;
+  height: 30px;
+}
+
+.register{
+  padding: 32px;
+  background-color: #1c0c21d7;
+  box-shadow: 5px 5px 1em #F8688B;
 }
 
 .btn{
   background-color: #F8688B !important;
   border-radius: 50px !important;
+  
 }
+
+.btn-register{
+  background-color: #F8688B !important;
+  border-radius: 50px !important;
+  margin-top: 30px !important;
+}
+
 .link-login{
   color: #EBBD47 !important;
 }

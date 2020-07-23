@@ -1,15 +1,10 @@
 import React from 'react';
-import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import Link from '@material-ui/core/Link';
-import Paper from '@material-ui/core/Paper';
-import Box from '@material-ui/core/Box';
-import Grid from '@material-ui/core/Grid';
-import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
+import Grid from '@material-ui/core/Grid';  
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, withTheme } from '@material-ui/core/styles';
 
@@ -31,9 +26,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: 'black',
 
   },
-  welcome: {
-  color: '#EBBD47',
-  },
+
   paper: {
     margin: theme.spacing(8, 4),
     display: 'flex',
@@ -58,34 +51,12 @@ export default function Login() {
       <Grid item xs={12} sm={8} md={5} className={classes.login}>
         <div className={classes.paper}>
           
-          <Typography component="h1" variant="h5" className={classes.welcome}>
+          <Typography component="h1" variant="h5" className= "welcome">
             BEM VINDO AO BURGER QUEEN         
           </Typography>
           <form className={classes.form} noValidate>
-            <TextField 
-              className= "input-login"
-              variant="outlined"
-              margin="normal"
-              required
-              fullWidth
-              id="email"
-              label="Email"
-              name="email"
-              autoComplete="email"
-              autoFocus
-            />
-            <TextField
-              className= "input-login"
-              variant="outlined"
-              margin="normal"
-              required
-              fullWidth
-              name="Senha"
-              label="Senha"
-              type="password"
-              id="password"
-              autoComplete="current-password"
-            />
+            <input className= "input-login" placeholder=" E-mail" type="email"></input>
+            <input className= "input-login" placeholder=" Senha" type="password"></input>
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"
