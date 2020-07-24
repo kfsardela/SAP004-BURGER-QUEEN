@@ -1,0 +1,11 @@
+.containerManha{
+    width: 200px;
+    margin: auto;
+
+}
+.btn-item{
+    width: 100%;
+    background-color: blueviolet;
+    color: white;
+    margin: 10px;
+}

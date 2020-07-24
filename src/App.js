@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import firebaseFunctions from "./firebase";
-
-import './App.css';
+import './style/App.css';
+import firebaseInit from './firebase'
 import Login from './pages/login'
 import Kitchen from './pages/kitchen'
 import Register from './pages/register'

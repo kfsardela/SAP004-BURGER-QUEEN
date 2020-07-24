@@ -1,0 +1,18 @@
+[
+    {
+        "descricao": "café americano", 
+        "preco": 5.00
+    },
+    {
+        "descricao": "café com leite", 
+        "preco": 7.00
+    },
+    {
+        "descricao": "misto quente", 
+        "preco": 10.00
+    },
+    {
+        "descricao": "suco de fruta natural", 
+        "preco": 7.00
+    }
+]

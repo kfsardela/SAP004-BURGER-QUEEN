@@ -7,6 +7,7 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import NativeSelect from '@material-ui/core/NativeSelect';
+import Input from '../components/Input';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -74,20 +75,16 @@ export default function Register() {
               </NativeSelect>
               </div>
               <Grid item xs={12}>
-              <input className= "input-login" placeholder=" Nome" type="text"></input>
+              <Input placeholder= "Nome completo" type= "text"/>
               </Grid>
               <Grid item xs={12}>
-              <input className= "input-login" placeholder=" E-mail" type="email"></input>
+              <Input placeholder= "E-mail" type= "email"/>
               </Grid>
               <Grid item xs={12}>
-              <input className= "input-login" placeholder=" Senha" type="password"></input>
+              <Input placeholder= "Senha" type= "password"/>
               </Grid>
             </Grid>
-            <Button
-              fullWidth
-              variant="contained"
-              color="primary"
-              className="btn-register"
+            <Button fullWidth variant="contained" color="primary" className="btn-register"
             >
               Cadastrar
             </Button>

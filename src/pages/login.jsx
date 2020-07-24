@@ -8,6 +8,7 @@ import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';  
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, withTheme } from '@material-ui/core/styles';
+import Input from '../components/Input';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -56,11 +57,12 @@ export default function Login() {
         <div className={classes.paper}>
           
           <Typography component="h1" variant="h5" className= "welcome">
-            BEM VINDO AO BURGER QUEEN         
+            <h1>FRIENDS <br></br> BURGUER </h1> 
+            <h2 className="sub-title">BEM VINDO(A)!</h2>       
           </Typography>
           <form className={classes.form} noValidate>
-            <input className= "input-login" placeholder=" E-mail" type="email"></input>
-            <input className= "input-login" placeholder=" Senha" type="password" ></input>
+            <Input placeholder= "E-mail" type= "email"/>
+            <Input placeholder= "Senha" type= "password"/>
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"

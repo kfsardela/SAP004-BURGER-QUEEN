@@ -1,0 +1,28 @@
+@import URL('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap'); 
+.kitchen-main{
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    color: #EBBD47;
+}
+
+.img-kichen{
+    width: 200px;
+    margin: auto;
+}
+
+.card-pedido {
+    background-color: rgb(199, 44, 199);
+    color: white;
+    width: 200px !important;
+    /*background-image: url(../images/moldura1.png);*/
+    height: 240px;
+    padding: 16px;
+
+}
+
+.carrossel {
+    width: 80%;
+    margin: auto;
+}

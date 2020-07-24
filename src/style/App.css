@@ -1,3 +1,4 @@
+@import URL('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap'); 
 .App {
   text-align: center;
 }
@@ -7,9 +8,14 @@
   pointer-events: none;
 }
 .welcome{
-  text-shadow: 5px 5px 10px #eb7b47;
-  color: #EBBD47;
-  margin-top: 140px !important;
+  color: white;
+  font-family: 'Permanent Marker', cursive !important;
+  margin-top: 100px !important;
+}
+
+.sub-title{
+  text-shadow: 3px 3px 7px #eb7b47;
+
 }
 
 .reg-img{
