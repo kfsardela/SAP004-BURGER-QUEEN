@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import firebase from '../firebase';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
@@ -43,8 +44,11 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Login() {
   const classes = useStyles();
+//  const [email, setEmail] = useState('')
+//  const [password, setPassword] = useState('')
 
   return (
+
     <Grid container component="main" className={classes.root}>
       <CssBaseline />
       <Grid item xs={false} sm={4} md={7} className={classes.image} />
@@ -56,7 +60,7 @@ export default function Login() {
           </Typography>
           <form className={classes.form} noValidate>
             <input className= "input-login" placeholder=" E-mail" type="email"></input>
-            <input className= "input-login" placeholder=" Senha" type="password"></input>
+            <input className= "input-login" placeholder=" Senha" type="password" ></input>
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"
@@ -77,7 +81,7 @@ export default function Login() {
                 </Link>
               </Grid>
               <Grid item>
-                <Link href="#" variant="body2" className= "link-login">
+                <Link href="/register" variant="body2" className= "link-login">
                   {"Não tem conta? Cadastre-se"}
                 </Link>
               </Grid>
@@ -87,4 +91,6 @@ export default function Login() {
       </Grid>
     </Grid>
   );
-}
+  
+    }
+ 

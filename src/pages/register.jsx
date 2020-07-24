@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SignUp() {
+export default function Register() {
   const classes = useStyles();
   const [state, setState] = React.useState({
     age: '',
@@ -93,7 +93,7 @@ export default function SignUp() {
             </Button>
             <Grid container justify="flex-end">
               <Grid item>
-                <Link href="#" variant="body2" className="link-login">
+                <Link href="/login" variant="body2" className="link-login">
                   Já possui conta? Acessar
                 </Link>
               </Grid>
