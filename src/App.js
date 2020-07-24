@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './style/App.css';
 import firebaseInit from './firebase'
 import Login from './pages/login'
 import Kitchen from './pages/kitchen'
