@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import firebase from '../firebase';
+import firebaseFunctions from '../firebase';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
@@ -45,8 +45,19 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Login() {
   const classes = useStyles();
-//  const [email, setEmail] = useState('')
-//  const [password, setPassword] = useState('')
+  let [email, setEmail] = useState('')
+  let [password, setPassword] = useState('')
+
+  const loginWithExistingEmail = (email, password) => {
+    firebaseFunctions
+      .auth
+      .signInWithEmailAndPassword(email, password)
+      .catch(function(error) {
+
+          window.logErrors("Senha e/ou usuário invalidos")
+
+      });
+  };
 
   return (
 
@@ -57,12 +68,12 @@ export default function Login() {
         <div className={classes.paper}>
           
           <Typography component="h1" variant="h5" className= "welcome">
-            <h1>FRIENDS <br></br> BURGUER </h1> 
+            <h1>FRIENDS <br></br> BURGER </h1> 
             <h2 className="sub-title">BEM VINDO(A)!</h2>       
           </Typography>
           <form className={classes.form} noValidate>
-            <Input placeholder= "E-mail" type= "email"/>
-            <Input placeholder= "Senha" type= "password"/>
+            <Input placeholder= "E-mail" type= "email" value={email} onChange={e=> setEmail(e.target.value)}/>
+            <Input placeholder= "Senha" type= "password" value={password} onChange={e=> setPassword(e.target.value)}/>
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"
@@ -73,6 +84,7 @@ export default function Login() {
               fullWidth
               variant="contained"
               color="primary"
+              onClick={loginWithExistingEmail}
             >
               Logar
             </Button>
@@ -94,5 +106,5 @@ export default function Login() {
     </Grid>
   );
   
-    }
+}
  

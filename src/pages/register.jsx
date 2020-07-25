@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
+import firebaseFunctions from "../firebase";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Link from "@material-ui/core/Link";
@@ -35,19 +36,29 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Register() {
-  const classes = useStyles();
-  const [state, setState] = React.useState({
-    age: '',
-    name: 'hai',
-  });
+  let [section, setSection] = useState('');
+  let [email, setEmail] = useState('');
+  let [password, setPassword] = useState('');
+  let [name, setName] = useState('');
 
-  const handleChange = (event) => {
-    const name = event.target.name;
-    setState({
-      ...state,
-      [name]: event.target.value,
-    });
-  };
+
+  const register = () => {
+    console.log(email, password, name, section)
+    firebaseFunctions.auth.createUserWithEmailAndPassword(email, password)
+    .then(auth => {
+      console.log(auth.user.uid)
+        return firebaseFunctions.db.collection("users").doc(auth.user.uid).set({
+          section: section,  
+          name: name,
+          email: email,
+    
+        })
+    })
+  
+  }
+
+  const classes = useStyles();
+
 
   return (
     <main className= "reg-img">
@@ -62,30 +73,29 @@ export default function Register() {
               <div className= "Reg-select">
               <label className="link-login">Qual o setor que você trabalha?</label>
               <NativeSelect
-                value={state.age}
-                onChange={handleChange}
-                name="age"
+                value={section}
+                onChange= {e=> setSection(e.target.value)}
+                name="section"
                 className={classes.selectEmpty} 
                 className="select-option"
                 inputProps={{ "aria-label": "age" }}
               >
                 <option value="" hidden>Selecionar</option>
-                <option value={10}>Cozinha</option>
-                <option value={20}>Atendimento</option>
+                <option value="kitchen">Cozinha</option>
+                <option value="saloon">Atendimento</option>
               </NativeSelect>
               </div>
               <Grid item xs={12}>
-              <Input placeholder= "Nome completo" type= "text"/>
+              <Input placeholder= "Nome completo" type= "text" value={name} onChange={e=> setName(e.target.value)}/>
               </Grid>
               <Grid item xs={12}>
-              <Input placeholder= "E-mail" type= "email"/>
+              <Input placeholder= "E-mail" type= "email" value={email} onChange={e=> setEmail(e.target.value)}/>
               </Grid>
               <Grid item xs={12}>
-              <Input placeholder= "Senha" type= "password"/>
+              <Input placeholder= "Senha" type= "password" value={password} onChange={e=> setPassword(e.target.value)}/>
               </Grid>
             </Grid>
-            <Button fullWidth variant="contained" color="primary" className="btn-register"
-            >
+            <Button fullWidth variant="contained" color="primary" className="btn-register" onClick={register}>
               Cadastrar
             </Button>
             <Grid container justify="flex-end">
