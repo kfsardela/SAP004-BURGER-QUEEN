@@ -1,4 +1,5 @@
 import React from "react";
+import Logout from '../components/Logout';
 import '../style/reset.css';
 import logo from "../images/logo.jpg";
 import Button from '@material-ui/core/Button';
@@ -25,6 +26,7 @@ export default function Saloon() {
         </div>
 
         <h2>Almoço e jantar</h2>
+        <Logout></Logout>
       </section>
     </main>
   );

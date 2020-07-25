@@ -1,4 +1,5 @@
 import React from 'react';
+import Logout from '../components/Logout';
 import logo from '../images/logo.jpg';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -31,7 +32,7 @@ export default function Kitchen() {
           
         </Slider>  
         <button>Pedidos entregues</button>  
-        <button>Sair</button>    
+        <Logout></Logout>   
       </main>
 
     );

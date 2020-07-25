@@ -48,13 +48,14 @@ export default function Login() {
   let [email, setEmail] = useState('')
   let [password, setPassword] = useState('')
 
-  const loginWithExistingEmail = (email, password) => {
+  const loginWithExistingEmail = () => {
     firebaseFunctions
       .auth
       .signInWithEmailAndPassword(email, password)
+      .then(user => console.log('then',user))
       .catch(function(error) {
 
-          window.logErrors("Senha e/ou usuário invalidos")
+          console.log("Senha e/ou usuário invalidos")
 
       });
   };
@@ -72,15 +73,14 @@ export default function Login() {
             <h2 className="sub-title">BEM VINDO(A)!</h2>       
           </Typography>
           <form className={classes.form} noValidate>
-            <Input placeholder= "E-mail" type= "email" value={email} onChange={e=> setEmail(e.target.value)}/>
-            <Input placeholder= "Senha" type= "password" value={password} onChange={e=> setPassword(e.target.value)}/>
+            <Input placeholder= "E-mail" type="email" name='email' value={email} onChange={e=> setEmail(e.target.value)}/>
+            <Input placeholder= "Senha" type="password" name='password' value={password} onChange={e=> setPassword(e.target.value)}/>
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"
             />
             <Button
               className= "btn"
-              type="submit"
               fullWidth
               variant="contained"
               color="primary"
