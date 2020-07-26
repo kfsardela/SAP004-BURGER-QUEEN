@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import firebase from '../firebase';
+import firebaseFunctions from '../firebase';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
@@ -45,8 +45,20 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Login() {
   const classes = useStyles();
-//  const [email, setEmail] = useState('')
-//  const [password, setPassword] = useState('')
+  let [email, setEmail] = useState('')
+  let [password, setPassword] = useState('')
+
+  const loginWithExistingEmail = () => {
+    firebaseFunctions
+      .auth
+      .signInWithEmailAndPassword(email, password)
+      .then(user => console.log('then',user))
+      .catch(function(error) {
+
+          console.log("Senha e/ou usuário invalidos")
+
+      });
+  };
 
   return (
 
@@ -61,18 +73,18 @@ export default function Login() {
             <h2 className="sub-title">BEM VINDO(A)!</h2>       
           </Typography>
           <form className={classes.form} noValidate>
-            <Input placeholder= "E-mail" type= "email"/>
-            <Input placeholder= "Senha" type= "password"/>
+            <Input placeholder= "E-mail" type="email" name='email' value={email} onChange={e=> setEmail(e.target.value)}/>
+            <Input placeholder= "Senha" type="password" name='password' value={password} onChange={e=> setPassword(e.target.value)}/>
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"
             />
             <Button
               className= "btn"
-              type="submit"
               fullWidth
               variant="contained"
               color="primary"
+              onClick={loginWithExistingEmail}
             >
               Logar
             </Button>
@@ -94,5 +106,5 @@ export default function Login() {
     </Grid>
   );
   
-    }
+}
  
