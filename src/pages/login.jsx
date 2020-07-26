@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     height: '100vh',
   },
   image: {
-    backgroundImage: 'url(/images/logo.jpg)',
+    backgroundImage: 'url(./images/logo.png)',
     backgroundRepeat: 'no-repeat',
     backgroundColor:
       theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
@@ -57,7 +57,7 @@ export default function Login() {
         <div className={classes.paper}>
           
           <Typography component="h1" variant="h5" className= "welcome">
-            <h1>FRIENDS <br></br> BURGUER </h1> 
+            <h1><img src="./images/fri.png"/> <br></br><img src="./images/burguer.png"/></h1> 
             <h2 className="sub-title">BEM VINDO(A)!</h2>       
           </Typography>
           <form className={classes.form} noValidate>

@@ -3,11 +3,12 @@ import "../style/Saloon.css"
 
 
 class CardapioItem extends Component {
+
     render() {
-        const { item, valor } = this.props;
+        const { item, valor, onClick } = this.props;
         return (
            
-                <li><button className="btn-item"> {item}  -  {valor}</button></li>
+                <li><button onClick={onClick} className="btn-item"> {item}  -  {valor}</button></li>
 
         );
     }

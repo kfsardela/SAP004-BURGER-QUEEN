@@ -1,0 +1,11 @@
+[
+    {
+        "descricao": "hambúrguer simples", 
+        "preco": 10.00
+    },
+    {
+        "descricao": "hambúrguer duplo", 
+        "preco": 15.00
+    }
+    
+]
