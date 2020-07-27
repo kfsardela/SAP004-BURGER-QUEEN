@@ -4,6 +4,7 @@ import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '../style/Kitchen.css';
+import Logout from '../components/Logout';
 
 export default function Orders() {
     const settings = {
@@ -53,7 +54,7 @@ export default function Orders() {
           </div>
         </Slider>  
         <button>Voltar</button>  
-        <button>Sair</button>       
+        <Logout></Logout>
       </main>
 
     );

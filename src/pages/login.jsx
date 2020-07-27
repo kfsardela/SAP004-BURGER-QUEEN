@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useHistory } from "react-router-dom";
 import firebaseFunctions from '../firebase';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -44,6 +45,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Login() {
+  let history = useHistory();
   const classes = useStyles();
   let [email, setEmail] = useState('')
   let [password, setPassword] = useState('')
@@ -52,7 +54,8 @@ export default function Login() {
     firebaseFunctions
       .auth
       .signInWithEmailAndPassword(email, password)
-      .then(user => console.log('then',user))
+      .then(history.push('/kitchen'))
+
       .catch(function(error) {
 
           console.log("Senha e/ou usuário invalidos")
