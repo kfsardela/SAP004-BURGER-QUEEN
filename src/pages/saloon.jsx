@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import "../style/reset.css";
 import logo from '../images/logo2.png';
+import Logout from '../components/Logout';
 import Button from "@material-ui/core/Button";
 import CardapioItem from "../components/CardapioItem";
 import CafeManha from "../Json/CafeDaManha.json";
@@ -107,7 +108,7 @@ class Saloon extends Component {
           </div>
           <div id="containerCardapio" className="containerManha"></div>
             <Button className="btn">Pedidos prontos</Button>
-            <Button className="btn">Sair</Button>
+            <Logout></Logout> 
         </section>
       </main>
     );
