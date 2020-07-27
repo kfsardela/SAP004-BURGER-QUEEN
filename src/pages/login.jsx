@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     height: '100vh',
   },
   image: {
-    backgroundImage: 'url(/images/logo.jpg)',
+    backgroundImage: 'url(./images/logo.png)',
     backgroundRepeat: 'no-repeat',
     backgroundColor:
       theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
@@ -51,18 +51,24 @@ export default function Login() {
   let [password, setPassword] = useState('')
 
   const loginWithExistingEmail = () => {
-    firebaseFunctions
-      .auth
-      .signInWithEmailAndPassword(email, password)
-      .then(history.push('/kitchen'))
-
-      .catch(function(error) {
-
-          console.log("Senha e/ou usuário invalidos")
-
-      });
-  };
-
+    firebaseFunctions.auth.signInWithEmailAndPassword(email, password)
+      .then((uid) => {
+        firebaseFunctions.db.collection('users').doc(uid.user.uid).get()
+        .then((doc) => {
+          if(doc.data().section === "kitchen") {
+            history.push('/kitchen')
+          } else {
+            history.push('/saloon')
+          }
+        })
+      })
+      
+        .catch((error) => alert(error))
+  
+      }
+  
+  
+  
   return (
 
     <Grid container component="main" className={classes.root}>
@@ -72,7 +78,7 @@ export default function Login() {
         <div className={classes.paper}>
           
           <Typography component="h1" variant="h5" className= "welcome">
-            <h1>FRIENDS <br></br> BURGER </h1> 
+            <h1><img src="./images/fri.png"/> <br></br><img src="./images/burguer.png"/></h1> 
             <h2 className="sub-title">BEM VINDO(A)!</h2>       
           </Typography>
           <form className={classes.form} noValidate>
@@ -108,6 +114,7 @@ export default function Login() {
       </Grid>
     </Grid>
   );
+  };
   
-}
+
  

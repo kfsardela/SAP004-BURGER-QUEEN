@@ -1,28 +1,42 @@
-@import URL('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap'); 
+*{
+    box-sizing: border-box;
+}
 .kitchen-main{
-    background-color: black;
-    width: 100vw;
+    background-image: url("../images/img1.jpg");
+    color: #EBBD47;
     height: 100vh;
     text-align: center;
-    color: #EBBD47;
+    width: 100vw;
 }
 
 .img-kichen{
-    width: 200px;
     margin: auto;
+    width: 200px;
 }
 
 .card-pedido {
-    background-color: rgb(199, 44, 199);
+    background-image: url(../images/moldura.png);
+    background-size: 100% 100%;
     color: white;
-    width: 200px !important;
-    /*background-image: url(../images/moldura1.png);*/
-    height: 240px;
-    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    margin: 0 auto;
+    padding-bottom: 70px;
+    padding-top: 70px;
+    width: 300px !important;
 
 }
 
+.pedido{
+    flex-grow: 1;
+}
+.btn-pronto{
+    margin: auto !important;
+    width: 30%;
+}
+
 .carrossel {
-    width: 80%;
-    margin: auto;
+    margin: 50px auto;
+    width: 90%;
 }
