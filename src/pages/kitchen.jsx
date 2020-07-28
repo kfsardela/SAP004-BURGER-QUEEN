@@ -1,6 +1,6 @@
 import React from 'react';
 import Logout from '../components/Logout';
-import logo from '../images/logo.png';
+import logo from '../images/logo2.png';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';

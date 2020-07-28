@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage: 'url(./images/logo.png)',
     backgroundRepeat: 'no-repeat',
     backgroundColor:
-      theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
+    theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
     backgroundSize: 'cover',
     backgroundPosition: 'center',
   },
@@ -78,12 +78,12 @@ export default function Login() {
         <div className={classes.paper}>
           
           <Typography component="h1" variant="h5" className= "welcome">
-            <h1><img src="./images/fri.png"/> <br></br><img src="./images/burguer.png"/></h1> 
+            <h1><img className="imagemLogo" src="./images/fri.png"/> <br></br><img className="imagemTexto" src="./images/burguer.png"/></h1> 
             <h2 className="sub-title">BEM VINDO(A)!</h2>       
           </Typography>
           <form className={classes.form} noValidate>
-            <Input placeholder= "E-mail" type="email" name='email' value={email} onChange={e=> setEmail(e.target.value)}/>
-            <Input placeholder= "Senha" type="password" name='password' value={password} onChange={e=> setPassword(e.target.value)}/>
+            <Input className="input-login" placeholder= "E-mail" type="email" name='email' value={email} onChange={e=> setEmail(e.target.value)}/>
+            <Input className="input-login" placeholder= "Senha" type="password" name='password' value={password} onChange={e=> setPassword(e.target.value)}/>
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"

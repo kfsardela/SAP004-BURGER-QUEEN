@@ -4,7 +4,16 @@
 .containerManha{
     margin: auto;
     width: 200px;
-
+}
+.btnSaloon{
+    background-color:#F8688B;
+    border-radius: 50px;
+    color: yellow;
+    display: block;
+    font-weight: bold; 
+    height: 40px;
+    margin: 20px;   
+    width: 160px;
 }
 .btn-item{
     background-color: blueviolet;
@@ -12,3 +21,28 @@
     margin: 10px;
     width: 100%;
 }
+.containerPedido{
+    display: flex;
+}
+.inputSaloon{
+    border-radius: 50px;
+    height: 30px;
+    width: 80px;
+}
+.resumoPedido{
+    width: 450px;
+ }
+ .tabelaPedido{
+     padding: 20px;
+     color: yellow;
+ }
+ .tabelaItem{
+     color: yellow;     
+     margin: 10px;
+ }
+ .btnRemove{
+     color: white;
+     background-color: red;
+     border-radius: 50px;
+     width: 70px;
+ }
