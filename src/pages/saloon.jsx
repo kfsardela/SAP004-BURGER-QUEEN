@@ -9,7 +9,6 @@ import CafeManha from "../Json/CafeDaManha.json";
 import AlmocoJantar from "../Json/AlmocoJantar.json";
 import Bebidas from "../Json/Bebidas.json";
 import Acompanhamento from "../Json/Acompanhamento.json";
-import Logout from "../components/Logout";
 import Tabela from "../components/Tabela";
 import BtnSaloon from "../components/Btn-Saloon"
 import Input from "../components/Input"
