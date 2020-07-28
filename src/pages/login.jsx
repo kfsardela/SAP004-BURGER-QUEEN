@@ -10,6 +10,8 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, withTheme } from '@material-ui/core/styles';
 import Input from '../components/Input';
+import swal from 'sweetalert';
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -63,11 +65,39 @@ export default function Login() {
         })
       })
       
-        .catch((error) => alert(error))
+        .catch((error) =>{
+          if (error.code === "auth/user-not-found") {
+            swal({
+              text: "Usuário não cadastrado",
+              icon: "warning",
+              button: "Ok",
+            });
+            }
+            else if (error.code === "auth/wrong-password" || error.code === "auth/invalid-password") {
+              swal({
+                text: "Senha incorreta",
+                icon: "warning",
+                button: "Ok",
+              });
+            }
+            else if (error.code === "auth/invalid-email"){
+              swal({
+                text: "Email inválido",
+                icon: "warning",
+                button: "Ok",
+              });
+            }
+            else{
+              swal({
+                text: "Ops! Algo deu errado,  por favor tente novamente",
+                icon: "warning",
+                button: "Ok",
+              });
+              alert("Ops! Algo deu errado,  por favor tente novamente")
+            }            
+        })
   
       }
-  
-  
   
   return (
 
