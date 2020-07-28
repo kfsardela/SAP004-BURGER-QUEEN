@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
+import firebaseFunctions from "../firebase";
 import "../style/reset.css";
 import logo from '../images/logo2.png';
 import Logout from '../components/Logout';
@@ -102,7 +103,14 @@ class Saloon extends Component {
         break;
     } 
   };
-
+  submitOrders = () => {
+    firebaseFunctions.db.collection("Orders").doc().set({
+      nome: this.state.nome,
+      mesa: this.state.mesa,
+      pedido: this.state.pedido,
+      total: this.state.total,
+    })
+    }
   render() {
     return (
       <main className="kitchen-main">
@@ -137,12 +145,17 @@ class Saloon extends Component {
           <Input placeholder= "Nome" type="text" className= "inputSaloon"  onChange={e=> this.setState({nome:  e.target.value})}/>    
             <Tabela pedido={this.state.pedido} remove={this.remove} total={this.state.total}/>
           </div> 
+          
         </section>
+        <button className="btn-register" onClick={this.submitOrders}>Enviar</button>
             <Button className="btn">Pedidos prontos</Button>
             <Logout></Logout>
       </main>
     );
+    
   }
+
+ 
 }
 
 export default Saloon;
