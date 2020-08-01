@@ -13,6 +13,24 @@ import Acompanhamento from "../Json/Acompanhamento.json";
 import Tabela from "../components/Tabela";
 import BtnSaloon from "../components/Btn-Saloon"
 import Input from "../components/Input"
+import ModalBurger from "../components/ModalBurger"
+
+const PedacoCardapio = props => {
+  return (
+    <ul>
+      <h3>{props.itens.titulo}</h3>
+      {props.itens.conteudo.map((item, index) => (
+        <CardapioItem
+          onClick={()=> item.descricao.includes('hambúrguer') ? 
+            props.atualizaBurger(item.descricao, item.preco) : props.atualizaPedido(item.descricao, item.preco)}
+          key={index}
+          item={item.descricao}
+          valor={item.preco}
+        />
+      ))}
+    </ul>
+  );  
+};
 
 class Saloon extends Component {
 
@@ -23,9 +41,11 @@ class Saloon extends Component {
     mesa: 0,
   };
 
+
+
   atualizaPedido = (pedido, valor) => {
     console.log(this.state);
-    
+            
     let existe = false;
     
     this.state.pedido.map((item, index) => {
@@ -46,7 +66,19 @@ class Saloon extends Component {
       this.setState({pedido:[...this.state.pedido, novoItem]}, ()=>{console.log(this.state)});   
     }
     this.setState({total: this.state.total + valor});  
-  };
+  };  
+
+  atualizaBurger = (burger, preco) => {
+    
+    const cardapio = document.getElementById("divModal");
+
+    ReactDOM.render(
+      <ModalBurger item={burger} valor={preco} atualizaPedido={this.atualizaPedido}/>
+      , cardapio
+    ) 
+   
+  }
+
 
   remove = (index, valor) => {
     const item = this.state.pedido[index];
@@ -70,18 +102,13 @@ class Saloon extends Component {
   };
 
   renderizaCardapio = (tipoCardapio) => {
-    const cardapio = document.getElementById("containerCardapio");    
-    
+    const cardapio = document.getElementById("containerCardapio");
     ReactDOM.render(
       <ul>
-        {tipoCardapio.map((item, index) => (
-          <CardapioItem
-            onClick={()=> this.atualizaPedido(item.descricao, item.preco)}
-            key={index}
-            item={item.descricao}
-            valor={item.preco}
-          />
-        ))}
+        {tipoCardapio.map((tipo, i) => 
+          <PedacoCardapio key={i} itens={tipo} atualizaPedido={this.atualizaPedido} 
+            atualizaBurger={this.atualizaBurger}/>
+        )}
       </ul>,
       cardapio
     );
@@ -94,12 +121,6 @@ class Saloon extends Component {
         break;
       case "almoco":
         this.renderizaCardapio(AlmocoJantar);
-        break;
-      case "acompanhamento":
-        this.renderizaCardapio(Acompanhamento);
-        break;
-      case "bebida":
-        this.renderizaCardapio(Bebidas);
         break;
     } 
   };
@@ -130,14 +151,6 @@ class Saloon extends Component {
                 this.selectMenu("almoco");
               }}
               text="ALMOÇO E JANTAR"/>
-            <BtnSaloon className="btnSaloon" onClick={() => {
-                this.selectMenu("acompanhamento");
-              }}
-              text="ACOMPANHAMENTO"/>
-            <BtnSaloon className="btnSaloon" onClick={() => {
-                this.selectMenu("bebida");
-              }}
-              text="BEBIDAS"/>
           </div>
           <div id="containerCardapio" className="containerManha"></div> 
           <div  className="resumoPedido">   
@@ -150,6 +163,7 @@ class Saloon extends Component {
         <button className="btn-register" onClick={this.submitOrders}>Enviar</button>
             <Button className="btn">Pedidos prontos</Button>
             <Logout></Logout>
+        <div id="divModal"></div>
       </main>
     );
     
