@@ -12,11 +12,11 @@ import Button from "@material-ui/core/Button";
 export default function Kitchen() {
     const settings = {
       dots: false,
-      infinite: true,
+      infinite: false,
       speed: 500,
-      slidesToShow: 2,
+      slidesToShow: 1,
       slidesToScroll: 1,
-      autoplay: true,
+      autoplay: false,
       autoplaySpeed: 4000,
     };
 
@@ -24,7 +24,7 @@ export default function Kitchen() {
    
 
     useEffect(() => {
-      firebaseFunctions.db.collection("Orders")
+      firebaseFunctions.db.collection("Orders").orderBy("hora_inicio", "asc")
       .onSnapshot(function(querySnapshot){
         let tableList = [];
         
@@ -45,8 +45,8 @@ export default function Kitchen() {
         <h2><img src="./images/pedidos.png"/> <br></br> <img src="./images/pendentes.png"/></h2>
           <Slider {...settings} className="carrossel">
             {
-              table.map(item => 
-                <Card mesa={item.mesa} horario={item.horario} nome={item.nome} pedido={item.pedido && item.pedido.map(item=>`${item.quantidade} ${item.descricao}`).join()} />
+              table.map((item, index) => 
+                <Card key={index} mesa={item.mesa} horario={item.hora_inicio.toDate().toLocaleString('pt-BR')} nome={item.nome} pedido={item.pedido && item.pedido.map(item=>`${item.quantidade} ${item.descricao}`).join()} />
               )
             }
         </Slider>
