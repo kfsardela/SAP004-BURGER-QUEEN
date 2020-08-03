@@ -4,11 +4,13 @@
         "conteudo":  [
             {
                 "descricao": "hambúrguer simples", 
-                "preco": 10.00
+                "preco": 10.00,
+                "imagem": "../images/simples.jpg"
             },
             {
                 "descricao": "hambúrguer duplo", 
-                "preco": 15.00
+                "preco": 15.00,
+                "imagem": "../images/duplo.jpg"
             }
 
         ]
@@ -18,11 +20,13 @@
         "conteudo": [
             {
                 "descricao": "Batata frita", 
-                "preco": 5.00
+                "preco": 5.00,
+                "imagem": "../images/fritas.jpg"
             },
             {
                 "descricao": "Anéis de cebola", 
-                "preco": 5.00
+                "preco": 5.00,
+                "imagem": "../images/anel.jpg"
             }
         ]
     },
@@ -31,19 +35,23 @@
         "conteudo": [
             {
                 "descricao": "água 500ml", 
-                "preco": 5.00
+                "preco": 5.00,
+                "imagem": "../images/aguap.jpg"
             },
             {
                 "descricao": "água 750ml", 
-                "preco": 7.00
+                "preco": 7.00,
+                "imagem": "../images/agua.jpg"
             },
             {
                 "descricao": "refrigerante 500ml", 
-                "preco": 7.00
+                "preco": 7.00,
+                "imagem": "../images/pequeno.jpg"
             },
             {
                 "descricao": "refrigerante 750ml", 
-                "preco": 10.00
+                "preco": 10.00,
+                "imagem": "../images/grande.jpg"
             }
         ]
     }

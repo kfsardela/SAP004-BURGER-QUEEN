@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import firebaseFunctions from "../firebase";
+import 'font-awesome/css/font-awesome.min.css'
 
 const signOut = () => {
    return firebaseFunctions.auth.signOut().then(function() {
@@ -13,7 +14,7 @@ const signOut = () => {
 }   
 class Logout extends Component {
     render(){
-       return (<button onClick={signOut}>sair</button>)
+       return (<i className="fa fa-sign-out" onClick={signOut}></i>)
   
     
 }

@@ -8,8 +8,6 @@ import Button from "@material-ui/core/Button";
 import CardapioItem from "../components/CardapioItem";
 import CafeManha from "../Json/CafeDaManha.json";
 import AlmocoJantar from "../Json/AlmocoJantar.json";
-import Bebidas from "../Json/Bebidas.json";
-import Acompanhamento from "../Json/Acompanhamento.json";
 import Tabela from "../components/Tabela";
 import BtnSaloon from "../components/Btn-Saloon"
 import Input from "../components/Input"
@@ -17,8 +15,8 @@ import ModalBurger from "../components/ModalBurger"
 
 const PedacoCardapio = props => {
   return (
-    <ul>
-      <h3>{props.itens.titulo}</h3>
+    <ul className="menuFlex">
+      <h3 className="titleMenu">{props.itens.titulo}</h3>
       {props.itens.conteudo.map((item, index) => (
         <CardapioItem
           onClick={()=> item.descricao.includes('hambúrguer') ? 
@@ -26,6 +24,7 @@ const PedacoCardapio = props => {
           key={index}
           item={item.descricao}
           valor={item.preco}
+          imagem={item.imagem}
         />
       ))}
     </ul>
@@ -104,7 +103,7 @@ class Saloon extends Component {
   renderizaCardapio = (tipoCardapio) => {
     const cardapio = document.getElementById("containerCardapio");
     ReactDOM.render(
-      <ul>
+      <ul className="menuMenu">
         {tipoCardapio.map((tipo, i) => 
           <PedacoCardapio key={i} itens={tipo} atualizaPedido={this.atualizaPedido} 
             atualizaBurger={this.atualizaBurger}/>
@@ -135,34 +134,37 @@ class Saloon extends Component {
   render() {
     return (
       <main className="kitchen-main">
-        <header>
+        <header className="headerSaloon">
+          <div></div>
           <h1>
-            <img src={logo} className="img-kichen"></img>
+            <img src={logo} className="logoSaloon"></img>
           </h1>
+            <Logout></Logout>
         </header>
           <h2><img src="./images/menu.png"/></h2>
-        <section className= "containerPedido">          
+        <section className= "containerOrder">  
+          <div>        
           <div className="containerButtons">
-            <BtnSaloon className="btnSaloon" onClick={() => {
+            <BtnSaloon className="btnSaloon btnTest" onClick={() => {
                 this.selectMenu("manha");
               }}
               text="CAFÉ DA MANHÃ"/>
-            <BtnSaloon className="btnSaloon" onClick={() => {
+            <BtnSaloon className="btnSaloon btnTest" onClick={() => {
                 this.selectMenu("almoco");
               }}
               text="ALMOÇO E JANTAR"/>
           </div>
           <div id="containerCardapio" className="containerManha"></div> 
-          <div  className="resumoPedido">   
+          </div>
+          <div  className="orderSummary">   
           <Input placeholder= "Mesa" type="number" className= "inputSaloon" onChange={e=> this.setState({mesa: e.target.value})}/>
           <Input placeholder= "Nome" type="text" className= "inputSaloon"  onChange={e=> this.setState({nome:  e.target.value})}/>    
             <Tabela pedido={this.state.pedido} remove={this.remove} total={this.state.total}/>
+             <BtnSaloon className="btnSaloon btnTest" text="Enviar" onClick={this.submitOrders}/>
+            <BtnSaloon className="btnSaloon btnTest" text="Pedidos prontos"/>
           </div> 
           
         </section>
-        <button className="btn-register" onClick={this.submitOrders}>Enviar</button>
-            <Button className="btn">Pedidos prontos</Button>
-            <Logout></Logout>
         <div id="divModal"></div>
       </main>
     );

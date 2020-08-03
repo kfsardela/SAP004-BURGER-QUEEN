@@ -4,19 +4,23 @@
         "conteudo": [
             {
                 "descricao": "café americano", 
-                "preco": 5.00
+                "preco": 5.00,
+                "imagem": "./images/cafe.png"
             },
             {
                 "descricao": "café com leite", 
-                "preco": 7.00
+                "preco": 7.00,
+                "imagem": "./images/leite.png"
             },
             {
                 "descricao": "misto quente", 
-                "preco": 10.00
+                "preco": 10.00,
+                "imagem": "./images/misto.jpg"
             },
             {
                 "descricao": "suco de fruta natural", 
-                "preco": 7.00
+                "preco": 7.00,
+                "imagem": "./images/suco.jpg"
             }
         ]
     }

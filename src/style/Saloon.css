@@ -1,58 +1,150 @@
 *{
     box-sizing: border-box;
 }
+.headerSaloon{
+    display: flex;
+    justify-content: space-around;
+}
+.logoSaloon{
+    width: 100px;
+}
 .containerManha{
-    margin: auto;
-    width: 200px;
+    height: 550px;
+    overflow: auto;
+    width: 400px;
 }
 
-.modal-burgers {
+.modalBurgers {
+    background-image: url(../images/moldura.png);
+    background-size: 100% 100%;
+    height: 50%;
+    left: 30%;
+    padding: 80px;
     position: fixed;
     top: 30%;
-    left: 30%;
     width: 40%;
-    height: 40%;
-    background-color: red;
 }
-
-.btnSaloon{
+.titleModal{
+    color: rgb(33, 33, 189);
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
+}
+.menuModal{
+    font-weight: bold;
+    padding-left: 20px;
+    text-align: left;
+}
+.btnModal{
     background-color:#F8688B;
     border-radius: 50px;
     color: yellow;
-    display: block;
-    font-weight: bold; 
+    font-size: 20px;
+    font-weight: bold;    
+    width: 60px;
+}
+.modalSpace{
+    margin: 5px;
+}
+
+.containerButtons{
+    display: flex;
+}
+
+.menuFlex{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+.menuMenu{    
+    background-color: rgba(228, 22, 176, 0.384);
+    border-radius: 30px;
+}
+
+.titleMenu{
+    width: 100%;
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.btnSaloon{
+    border-color: #e3f11c;
+    color: black;
+    box-shadow: 0 0 40px 40px #e3f11c inset, 0 0 0 0 #e3f11c;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
     height: 40px;
     margin: 20px;   
     width: 160px;
+    font-weight: bold;
 }
-.btn-item{
-    background-color: blueviolet;
-    color: white;
-    margin: 10px;
+.btnSaloon:hover {
+    box-shadow: 0 0 10px 0 #e3f11c inset, 0 0 10px 4px #e3f11c;
+    
+}
+.btnTest {
+    background-color: transparent;
+    border: 2px solid;
+    border-radius: 0.6em;    
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+  }
+  .btnTest:hover, .btnTest:focus {
+    color: #fff;
+    outline: 0;
+  }
+.btnItems{
+    border-color: #3498db;
+    color: #fff;
+    box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+    margin: 10px 0;
     width: 100%;
 }
-.containerPedido{
+.btnItems:hover {
+    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+    
+}
+.containerOrder{
     display: flex;
+    justify-content: space-around;
 }
 .inputSaloon{
     border-radius: 50px;
     height: 30px;
     width: 80px;
 }
-.resumoPedido{
+.orderSummary{
     width: 450px;
+    margin-top: 80px;
  }
- .tabelaPedido{
+ .tableOrder{
      padding: 20px;
      color: yellow;
  }
- .tabelaItem{
+ .tableItems{
      color: yellow;     
      margin: 10px;
  }
- .btnRemove{
-     color: white;
-     background-color: red;
-     border-radius: 50px;
-     width: 70px;
+ .fa-trash{
+     font-size: 25px;
+     color: black;
  }
+ .imgMenu{
+     width: 120px;
+     height: 100px;
+ }
+ .itemMenu{
+     width: 150px;
+ }
+ .orderSummary{
+     padding: 20px;
+     background-color: rgba(228, 22, 176, 0.384);
+     border-radius: 30px; 
+ }
+ 
