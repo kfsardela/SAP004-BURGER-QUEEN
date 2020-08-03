@@ -14,6 +14,7 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 const firebaseFunctions = {
     auth: firebase.auth(),
-    db: firebase.firestore()
+    db: firebase.firestore(),
+    firestore: firebase.firestore
 }
 export default firebaseFunctions
