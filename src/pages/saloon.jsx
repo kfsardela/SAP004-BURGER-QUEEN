@@ -131,6 +131,7 @@ class Saloon extends Component {
       pedido: this.state.pedido,
       total: this.state.total,
       hora_inicio: firebaseFunctions.firestore.Timestamp.fromDate(new Date()),
+      status: "pendente"
     })
     }
   render() {

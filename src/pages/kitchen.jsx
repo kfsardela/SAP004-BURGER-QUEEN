@@ -24,17 +24,30 @@ export default function Kitchen() {
    
 
     useEffect(() => {
-      firebaseFunctions.db.collection("Orders").orderBy("hora_inicio", "asc")
+      firebaseFunctions.db.collection("Orders")
+      .where("status", "==", "pendente")
+      .orderBy("hora_inicio", "asc")
       .onSnapshot(function(querySnapshot){
         let tableList = [];
         
         querySnapshot.docs.forEach(function(doc) {
-          tableList.push(doc.data());
+          tableList.push({
+            id:doc.id,
+            ...doc.data()}
+            );
+
         });
-        
         setTable(tableList)
       })
     })
+    const updateOrder = (id) => {
+      console.log(id)
+      firebaseFunctions.db.collection("Orders").doc(id).update({
+        hora_fim: firebaseFunctions.firestore.Timestamp.fromDate(new Date()),
+        status: "pronto"
+      
+      })
+      }
     
     return (
       
@@ -46,7 +59,7 @@ export default function Kitchen() {
           <Slider {...settings} className="carrossel">
             {
               table.map((item, index) => 
-                <Card key={index} mesa={item.mesa} horario={item.hora_inicio.toDate().toLocaleString('pt-BR')} nome={item.nome} pedido={item.pedido && item.pedido.map(item=>`${item.quantidade} ${item.descricao}`).join()} />
+                <Card key={index} button={()=>updateOrder(item.id)} mesa={item.mesa} horario={item.hora_inicio.toDate().toLocaleString('pt-BR')} nome={item.nome} pedido={item.pedido && item.pedido.map(item=>`${item.quantidade} ${item.descricao}`).join()} />
               )
             }
         </Slider>
