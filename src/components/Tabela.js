@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import 'font-awesome/css/font-awesome.min.css'
+import 'font-awesome/css/font-awesome.min.css'
 
 
 const TableHead = () => {
@@ -21,7 +21,7 @@ const TableBody = props => {
             <tr key={index}>
                 <td className="tableItems">{linha.quantidade}</td>
                 <td className="tableItems">{linha.descricao}</td>
-                <td className="tableItems">{linha.preco}</td>
+                <td className="tableItems">R$ {linha.preco}</td>
                 <td className="tableItems"><i className="fa fa-trash" aria-hidden="true" onClick={() => { props.removeQuantidade(index, linha.preco) }}></i></td>
             </tr>
         );
@@ -38,7 +38,7 @@ const TableFoot = props => {
     return (
         <tfoot>
             <tr>
-                <td className="tableItems" colSpan="4">Total: {props.total}</td>
+                <td className="tableItems" colSpan="4">Total: R$ {props.total}</td>
             </tr>
         </tfoot>
     );

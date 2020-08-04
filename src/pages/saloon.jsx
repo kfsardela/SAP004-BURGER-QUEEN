@@ -38,6 +38,13 @@ class Saloon extends Component {
     nome: '',
     mesa: 0,
   };
+  
+  initialState = {
+    pedido: [],
+    total: 0,
+    nome: '',
+    mesa: 0,
+  };
 
 
 
@@ -123,6 +130,8 @@ class Saloon extends Component {
     } 
   };
   submitOrders = () => {
+    this.setState({ ...this.initialState });
+
     firebaseFunctions.db.collection("Orders").doc().set({
       nome: this.state.nome,
       mesa: this.state.mesa,
