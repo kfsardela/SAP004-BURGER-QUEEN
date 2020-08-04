@@ -5,10 +5,11 @@ import "../style/Saloon.css"
 class CardapioItem extends Component {
 
     render() {
-        const { item, valor, onClick } = this.props;
+        const { item, valor, onClick, imagem } = this.props;
+        console.log(imagem);
         return (
            
-                <li><button onClick={onClick} className="btn-item"> {item}  -  {valor}</button></li>
+                <li className="itemMenu"><img className="imgMenu" src={imagem}/><button onClick={onClick} className="btnItems btnTest"> {item}  <br/>  {valor}</button></li>
 
         );
     }

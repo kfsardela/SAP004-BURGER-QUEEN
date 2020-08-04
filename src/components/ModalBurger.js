@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import "../style/Saloon.css";
 import ReactDOM from 'react-dom';
+import BtnSaloon from './Btn-Saloon';
 
 class ModalBurger extends Component {
 
@@ -26,9 +27,9 @@ class ModalBurger extends Component {
     }
 
     atualizaPreco = preco => {
-        preco = this.checkOvo[0].checked ? preco+=1 : preco;
+        preco = this.checkOvo[0].checked ? preco += 1 : preco;
 
-        preco = this.checkQueijo[0].checked ? preco+=1 : preco;
+        preco = this.checkQueijo[0].checked ? preco += 1 : preco;
 
         return preco;
     }
@@ -37,28 +38,32 @@ class ModalBurger extends Component {
         const { item, valor, atualizaPedido } = this.props;
         return (
 
-            <div className="modal-burgers">
-                <p>Tipo do Hambúrguer</p>
-                <input type="radio" value="bovino" name="tipoCarne" />
-                <label>Bovino</label>
-                <input type="radio" value="frango" name="tipoCarne" />
-                <label>Frango</label>
-                <input type="radio" value="vegetariano" name="tipoCarne" />
-                <label>Vegetariano</label>
+            <div className="modalBurgers">
+                <p className="titleModal">Tipo do Hambúrguer</p>
+                <div className="menuModal">
+                    <input className="modalSpace" type="radio" value="bovino" name="tipoCarne" />
+                    <label>Bovino</label><br />
+                    <input className="modalSpace" type="radio" value="frango" name="tipoCarne" />
+                    <label>Frango</label><br />
+                    <input className="modalSpace" type="radio" value="vegetariano" name="tipoCarne" />
+                    <label>Vegetariano</label><br />
+                </div>
 
-                <p>Adicionais</p>
-                <input type="checkbox" name="ovo" value="com ovo"/>
-                <label>Ovo</label>
-                <input type="checkbox" name="queijo" value="com queijo"/>
-                <label>Queijo</label>           
+                <p className="titleModal">Adicionais</p>
+                <div className="menuModal">
+                    <input className="modalSpace" type="checkbox" name="ovo" value="com ovo" />
+                    <label>Ovo</label><br />
+                    <input className="modalSpace" type="checkbox" name="queijo" value="com queijo" />
+                    <label>Queijo</label><br />
+                </div>
 
-                <button onClick={() => {
+                <BtnSaloon className="btnModal btnTest" text="ok" onClick={() => {
                     const textoFinal = this.atualizaDescricao(item);
                     const valorFinal = this.atualizaPreco(valor);
                     atualizaPedido(textoFinal, valorFinal);
-                    var container = ReactDOM.findDOMNode(this).parentNode;    
+                    var container = ReactDOM.findDOMNode(this).parentNode;
                     ReactDOM.unmountComponentAtNode(container);
-                }}>Finalizar Hamburguer</button>
+                }}></BtnSaloon>
             </div>
 
         );

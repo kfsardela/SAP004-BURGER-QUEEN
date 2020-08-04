@@ -103,6 +103,10 @@
 .App-link {
   color: #61dafb;
 }
+.fa-sign-out{
+  font-size: 25px !important;
+  padding: 20px;
+}
 
 
 @keyframes App-logo-spin {
