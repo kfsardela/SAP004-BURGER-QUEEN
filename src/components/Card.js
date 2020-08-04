@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
-import Button from "@material-ui/core/Button";
+import BtnSaloon from "../components/Btn-Saloon"
 
 
 class Card extends Component {
     render() {
         const {mesa, horario, nome, pedido} = this.props;
         return (
-            <div className="card-pedido">
-                <h4>Mesa: {mesa}</h4>
+            <div className="cardPedido">
                 <p>Hora: {horario}</p>
+                <h4>Mesa: {mesa}</h4>
                 <p>Nome: {nome}</p>
                 <p className= "pedido">Pedido: {pedido}</p>
-                <Button className= "btn btn-pronto">Pronto</Button>
+                <BtnSaloon className="btnModal btnTest btnPronto" text="Pronto"/>
             </div>
         );
     }
