@@ -7,15 +7,16 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '../style/Kitchen.css';
 import Card from '../components/Card';
-import Button from "@material-ui/core/Button";
+import BtnSaloon from "../components/Btn-Saloon"
+
 
 export default function Kitchen() {
     const settings = {
       dots: false,
       infinite: false,
       speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1,
+      slidesToShow: 2,
+      slidesToScroll: 2,
       autoplay: false,
       autoplaySpeed: 4000,
     };
@@ -52,8 +53,10 @@ export default function Kitchen() {
     return (
       
       <main className= "kitchen-main">
-        <header>
-          <h1 ><img  src= {logo} className="img-kichen"></img></h1>
+        <header className="headerSaloon">
+          <div></div>
+          <h1 ><img  src= {logo} className="logoSaloon"></img></h1>
+            <Logout></Logout>   
         </header>
         <h2><img src="./images/pedidos.png"/> <br></br> <img src="./images/pendentes.png"/></h2>
           <Slider {...settings} className="carrossel">
@@ -63,8 +66,7 @@ export default function Kitchen() {
               )
             }
         </Slider>
-        <Button className="btn">Pedidos prontos</Button>
-        <Logout></Logout>   
+        <BtnSaloon className="btnSaloon btnTest" text="Pedidos prontos"/>
       </main>
 
     );

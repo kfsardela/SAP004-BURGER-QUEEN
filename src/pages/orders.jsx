@@ -52,7 +52,8 @@ export default function Orders() {
     return (
       <main className= "kitchen-main">
         <header>
-          <h1 ><img  src= {logo} className="img-kichen"></img></h1>
+        <h1 ><img  src= {logo} className="logoSaloon"></img></h1>
+
         </header>
         <h2><img src="./images/pedidos.png"/></h2>
           <Slider {...settings} className="carrossel">

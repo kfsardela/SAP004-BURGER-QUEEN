@@ -8,30 +8,39 @@
     text-align: center;
     width: 100vw;
 }
+.headerSaloon{
+    display: flex;
+    justify-content: space-around;
+}
 
-.img-kichen{
+.logoSaloon{
     margin: auto;
     width: 200px;
 }
 
-.card-pedido {
+.cardPedido {
     background-image: url(../images/moldura.png);
     background-size: 100% 100%;
     color: white;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
-    height: 350px;
+    height: 430px;
     margin: 0 auto;
-    padding-bottom: 70px;
-    padding-top: 70px;
-    width: 300px !important;
+    padding-bottom: 90px;
+    padding-top: 100px;
+    width: 380px !important;
 
 }
 
 .pedido{
     flex-grow: 1;
+    width: 200px;
+    margin: auto;
+    margin-left: 90px;
+    
 }
-.btn-pronto{
+.btnPronto{
     margin: auto !important;
     width: 30%;
 }
