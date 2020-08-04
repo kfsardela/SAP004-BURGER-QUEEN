@@ -1,60 +1,68 @@
-import React from 'react'
-import logo from '../images/logo.jpg'
-import Slider from 'react-slick'
+import React, { useState, useEffect } from 'react';
+import firebaseFunctions from "../firebase";
+import Logout from '../components/Logout';
+import logo from '../images/logo2.png';
+import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '../style/Kitchen.css';
-import Logout from '../components/Logout';
+import Card from '../components/Card';
+import Button from "@material-ui/core/Button";
 
 export default function Orders() {
-    const settings = {
-      dots: false,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      autoplay: true,
-    };
+  const settings = {
+    dots: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false,
+    autoplaySpeed: 4000,
+  };
+
+    let [pedido, setPedido] = useState([]);
+   
+
+    useEffect(() => {
+      firebaseFunctions.db.collection("Orders")
+      .where("status", "==", "pronto")
+      .orderBy("hora_fim", "asc")
+      .onSnapshot(function(querySnapshot){
+        let pedidoList = [];
+
+        querySnapshot.docs.forEach(function(doc) {
+          pedidoList.push({
+            id:doc.id,
+            ...doc.data()}
+            );
+
+        });
+        setPedido(pedidoList)
+      })
+    }, [])
+    const updateOrder = (id) => {
+      console.log(id)
+      firebaseFunctions.db.collection("Orders").doc(id).update({
+        status: "entregue"
+      
+      })
+      }
+        
 
     return (
       <main className= "kitchen-main">
         <header>
           <h1 ><img  src= {logo} className="img-kichen"></img></h1>
         </header>
-        <h2>Pedidos Prontos</h2>
-        {/* criar componentes para cards*/}
-        <Slider {...settings} className="carrossel">
-          <div className="card-pedido">
-            <h4>Mesa:1</h4>
-            <p>Data/ Horário</p>
-            <p>Nome:</p>
-            <p>Pedido:</p>
-            <button>Entregue</button>            
-          </div>
-          <div className="card-pedido">
-            <h4>Mesa:2</h4>
-            <p>Data/ Horário</p>
-            <p>Nome:</p>
-            <p>Pedido:</p>
-            <button>Entregue</button>            
-          </div>
-          <div className="card-pedido">
-            <h4>Mesa:3</h4>
-            <p>Data/ Horário</p>
-            <p>Nome:</p>
-            <p>Pedido:</p>
-            <button>Entregue</button>            
-          </div>
-          <div className="card-pedido">
-            <h4>Mesa:4</h4>
-            <p>Data/ Horário</p>
-            <p>Nome:</p>
-            <p>Pedido:</p>
-            <button>Entregue</button>            
-          </div>
-        </Slider>  
-        <button>Voltar</button>  
-        <Logout></Logout>
+        <h2><img src="./images/pedidos.png"/></h2>
+          <Slider {...settings} className="carrossel">
+            {
+              pedido.map((item, index) => 
+                <Card key={index} button={()=>updateOrder(item.id)} mesa={item.mesa} horario={item.hora_inicio.toDate().toLocaleString('pt-BR')} nome={item.nome} pedido={item.pedido && item.pedido.map(item=>`${item.quantidade} ${item.descricao}`).join()} />
+              )
+            }
+        </Slider>
+        <Logout></Logout>   
       </main>
 
     );
