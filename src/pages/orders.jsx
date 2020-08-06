@@ -64,7 +64,7 @@ export default function Orders() {
                 //Tempo de preparo
                 const diff = Math.round((item.hora_fim.toDate().getTime() - item.hora_inicio.toDate().getTime())/60/1000)
 
-                return <Card key={index} button={()=>updateOrder(item.id)} mesa={item.mesa} horario={item.hora_fim.toDate().toLocaleString('pt-BR')} tempo={diff} nome={item.nome} pedido={item.pedido && item.pedido.map(item=>`${item.quantidade} ${item.descricao}`).join()} />
+                return <Card key={index} button={()=>updateOrder(item.id)} textButton={"Entregue"} mesa={item.mesa} horario={item.hora_fim.toDate().toLocaleString('pt-BR')} tempo={diff} nome={item.nome} pedido={item.pedido && item.pedido.map(item=>`${item.quantidade} ${item.descricao}`).join()} />
               })
               
             }

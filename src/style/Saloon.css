@@ -1,14 +1,17 @@
-*{
+* {
     box-sizing: border-box;
 }
-.headerSaloon{
+
+.headerSaloon {
     display: flex;
     justify-content: space-between;
 }
-.logoSaloon{
+
+.logoSaloon {
     width: 100px;
 }
-.containerManha{
+
+.containerManha {
     height: 550px;
     overflow: auto;
     width: 400px;
@@ -24,80 +27,88 @@
     top: 30%;
     width: 40%;
 }
-.titleModal{
+
+.titleModal {
     color: rgb(33, 33, 189);
     font-size: 20px;
     font-weight: bold;
     margin: 10px;
 }
-.menuModal{
+
+.menuModal {
     font-weight: bold;
     padding-left: 20px;
     text-align: left;
 }
-.btnModal{
-    background-color:#F8688B;
+
+.btnModal {
+    background-color: #F8688B;
     border-radius: 50px;
     color: yellow;
     font-size: 20px;
-    font-weight: bold;    
-    width: 60px;
+    font-weight: bold;
+    width: auto;
 }
-.modalSpace{
+
+.modalSpace {
     margin: 5px;
 }
 
-.containerButtons{
+.containerButtons {
     display: flex;
 }
 
-.menuFlex{
+.menuFlex {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
     justify-content: space-around;
-    
 }
-.menuMenu{    
+
+.menuMenu {
     background-color: rgba(228, 22, 176, 0.384);
     border-radius: 30px;
 }
 
-.titleMenu{
+.titleMenu {
     width: 100%;
     font-size: 24px;
     margin-bottom: 16px;
 }
 
-.btnSaloon{
+.btnSaloon {
     border-color: #e3f11c;
     color: black;
     box-shadow: 0 0 40px 40px #e3f11c inset, 0 0 0 0 #e3f11c;
     -webkit-transition: all 150ms ease-in-out;
     transition: all 150ms ease-in-out;
     height: 40px;
-    margin: 20px;   
+    margin: 20px;
     width: 160px;
     font-weight: bold;
 }
+
 .btnSaloon:hover {
     box-shadow: 0 0 10px 0 #e3f11c inset, 0 0 10px 4px #e3f11c;
-    
 }
+
 .btnTest {
     background-color: transparent;
     border: 2px solid;
-    border-radius: 0.6em;    
+    border-radius: 0.6em;
     cursor: pointer;
     text-decoration: none;
     text-align: center;
     font-size: 14px;
-  }
-  .btnTest:hover, .btnTest:focus {
+}
+
+.btnTest:hover,
+.btnTest:focus {
     color: #fff;
     outline: 0;
-  }
-.btnItems{
+}
+
+.btnItems {
     border-color: #3498db;
     color: #fff;
     box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
@@ -106,49 +117,58 @@
     margin: 10px 0;
     width: 100%;
 }
+
 .btnItems:hover {
     box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
-    
 }
-.containerOrder{
+
+.containerOrder {
     display: flex;
     justify-content: space-around;
 }
-.inputSaloon{
+
+.inputSaloon {
     border-radius: 50px;
     height: 30px;
     width: 80px;
 }
-.orderSummary{
+
+.orderSummary {
     width: 450px;
     margin-top: 80px;
- }
- .tableOrder{
-     padding: 20px;
-     color: yellow;
- }
- .tableItems{
-     color: yellow;     
-     margin: 10px;
- }
- .headerLogo{
+}
+
+.tableOrder {
+    padding: 20px;
+    color: yellow;
+}
+
+.tableItems {
+    color: yellow;
+    margin: 10px;
+}
+
+.headerLogo {
     width: 100px;
- }
- .fa-trash{
-     font-size: 25px;
-     color: black;
-     width: 100px;
- }
- .imgMenu{
-     width: 120px;
-     height: 100px;
- }
- .itemMenu{
-     width: 150px;
- }
- .orderSummary{
-     padding: 20px;
-     background-color: rgba(228, 22, 176, 0.384);
-     border-radius: 30px; 
- }
- 
+}
+
+.fa-trash {
+    font-size: 25px;
+    color: black;
+    width: 100px;
+}
+
+.imgMenu {
+    width: 120px;
+    height: 100px;
+}
+
+.itemMenu {
+    width: 150px;
+}
+
+.orderSummary {
+    padding: 20px;
+    background-color: rgba(228, 22, 176, 0.384);
+    border-radius: 30px;
+}

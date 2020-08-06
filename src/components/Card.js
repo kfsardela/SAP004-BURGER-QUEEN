@@ -4,7 +4,7 @@ import BtnSaloon from "../components/Btn-Saloon"
 
 class Card extends Component {
     render() {
-        const {mesa, horario, nome, pedido, tempo, button} = this.props;
+        const {mesa, horario, nome, pedido, tempo, button, textButton} = this.props;
         return (
             <div className="cardPedido">
                 <p>Feito em: {horario}</p>
@@ -13,7 +13,7 @@ class Card extends Component {
                 <p>Nome: {nome}</p>
                 <p className= "pedido">Pedido: {pedido}</p>
                 {/* <Button className= "btn btn-pronto" onClick={button}>Pronto</Button> */}
-                <BtnSaloon className="btnModal btnTest btnPronto" onClick={button} text="Pronto"/>
+                <BtnSaloon className="btnModal btnTest btnPronto" onClick={button} text={textButton}/>
             </div>
         );
     }
