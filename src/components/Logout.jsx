@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import firebaseFunctions from "../firebase";
-// import 'font-awesome/css/font-awesome.min.css'
+import 'font-awesome/css/font-awesome.min.css'
 
 const signOut = () => {
    return firebaseFunctions.auth.signOut().then(function() {
