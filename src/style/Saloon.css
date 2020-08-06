@@ -3,7 +3,7 @@
 }
 .headerSaloon{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .logoSaloon{
     width: 100px;
@@ -131,9 +131,13 @@
      color: yellow;     
      margin: 10px;
  }
+ .headerLogo{
+    width: 100px;
+ }
  .fa-trash{
      font-size: 25px;
      color: black;
+     width: 100px;
  }
  .imgMenu{
      width: 120px;

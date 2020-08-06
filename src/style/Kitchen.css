@@ -46,6 +46,23 @@
 }
 
 .carrossel {
-    margin: 50px auto;
-    width: 90%;
+    margin: 50px 50px;
+}
+@media only screen and (max-device-width: 460px) {
+    .cardPedido {
+        height: 250px;
+        width: 200px !important;
+        padding-bottom: 50px;
+        padding-top: 60px;
+    }
+    .pedido{
+        width: 100px;
+        margin-left: 40px;
+        font-size: 12px;
+    }
+    .titleKitchen{
+        width: 280px;
+    }
+    
+
 }

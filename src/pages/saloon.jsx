@@ -145,11 +145,13 @@ class Saloon extends Component {
     return (
       <main className="kitchen-main">
         <header className="headerSaloon">
-          <div></div>
+          <div className="headerLogo"></div>
           <h1>
             <img src={logo} className="logoSaloon"></img>
           </h1>
-            <Logout></Logout>
+          <div className="headerLogo">
+            <Logout></Logout> 
+          </div>
         </header>
           <h2><img src="./images/menu.png"/></h2>
         <section className= "containerOrder">  
