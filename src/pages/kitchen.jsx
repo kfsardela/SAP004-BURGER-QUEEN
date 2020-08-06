@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import firebaseFunctions from "../firebase";
-import Logout from '../components/Logout';
-import logo from '../images/logo2.png';
+import Header from "../components/Header";
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -62,13 +61,7 @@ export default function Kitchen() {
     return (
       
       <main className= "kitchen-main">
-        <header className="headerSaloon">
-          <div className="headerLogo"></div>
-          <h1 ><img  src= {logo} className="logoSaloon"></img></h1>
-          <div className="headerLogo">
-            <Logout></Logout> 
-          </div>
-        </header>
+        <Header isHome={false}/>
         <h2><img className="titleKitchen" src="./images/pedidos.png"/> <br/> <img className="titleKitchen" src="./images/pendentes.png"/></h2>
           <Slider {...settings} className="carrossel">
             {

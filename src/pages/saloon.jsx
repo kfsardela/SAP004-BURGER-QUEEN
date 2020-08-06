@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import firebaseFunctions from "../firebase";
 import "../style/reset.css";
-import logo from '../images/logo2.png';
-import Logout from '../components/Logout';
+
 import CardapioItem from "../components/CardapioItem";
 import CafeManha from "../Json/CafeDaManha.json";
 import AlmocoJantar from "../Json/AlmocoJantar.json";
@@ -11,6 +10,7 @@ import Tabela from "../components/Tabela";
 import BtnSaloon from "../components/Btn-Saloon"
 import Input from "../components/Input"
 import ModalBurger from "../components/ModalBurger"
+import Header from "../components/Header";
 
 const PedacoCardapio = props => {
   return (
@@ -144,16 +144,8 @@ class Saloon extends Component {
   render() {
     return (
       <main className="kitchen-main">
-        <header className="headerSaloon">
-          <div className="headerLogo"></div>
-          <h1>
-            <img src={logo} className="logoSaloon"></img>
-          </h1>
-          <div className="headerLogo">
-            <Logout></Logout> 
-          </div>
-        </header>
-          <h2><img src="./images/menu.png"/></h2>
+        <Header isHome={false}/>
+          <h2><img className="menu" src="./images/menu.png"/></h2>
         <section className= "containerOrder">  
           <div>        
           <div className="containerButtons">
@@ -172,7 +164,7 @@ class Saloon extends Component {
           <Input placeholder= "Mesa" type="number" className= "inputSaloon" onChange={e=> this.setState({mesa: e.target.value})}/>
           <Input placeholder= "Nome" type="text" className= "inputSaloon"  onChange={e=> this.setState({nome:  e.target.value})}/>    
             <Tabela pedido={this.state.pedido} remove={this.remove} total={this.state.total}/>
-             <BtnSaloon className="btnSaloon btnTest" text="Enviar" onClick={this.submitOrders}/>
+            <BtnSaloon className="btnSaloon btnTest" text="Enviar" onClick={this.submitOrders}/>
             <BtnSaloon className="btnSaloon btnTest" text="Pedidos prontos"/>
           </div> 
           

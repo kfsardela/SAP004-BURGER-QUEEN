@@ -1,22 +1,30 @@
 import React, { useState, useEffect } from 'react';
 import firebaseFunctions from "../firebase";
-import Logout from '../components/Logout';
-import logo from '../images/logo2.png';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '../style/Kitchen.css';
 import Card from '../components/Card';
+import Header from "../components/Header";
 
 export default function Orders() {
   const settings = {
-    dots: false,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: false,
-    autoplaySpeed: 4000,
+      dots: false,
+      infinite: false,
+      speed: 500,
+      slidesToShow: 2,
+      slidesToScroll: 2,
+      autoplay: false,
+      autoplaySpeed: 4000,
+      responsive: [
+        {
+          breakpoint: 900,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          }
+        }
+      ]
   };
 
     let [pedido, setPedido] = useState([]);
@@ -50,12 +58,7 @@ export default function Orders() {
 
     return (
       <main className= "kitchen-main">
-        <header >
-        <div></div>
-        <h1 ><img  src= {logo} className="logoSaloon"></img></h1>
-        <i class="fa fa-home" aria-hidden="true"></i>
-            <Logout></Logout>   
-        </header>
+        <Header isHome={true}/>
         <h2><img src="./images/pedidos.png"/></h2>
           <Slider {...settings} className="carrossel">
             {

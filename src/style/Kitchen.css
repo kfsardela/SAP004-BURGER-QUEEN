@@ -32,13 +32,15 @@
     width: 380px !important;
 
 }
+.time{
+    font-size: 12px;
+}
 
 .pedido{
     flex-grow: 1;
     width: 200px;
     margin: auto;
-    margin-left: 90px;
-    
+    margin-left: 90px;    
 }
 .btnPronto{
     margin: auto !important;
@@ -63,6 +65,8 @@
     .titleKitchen{
         width: 280px;
     }
-    
+    .time{
+        font-size: 9px;
+    }
 
 }
