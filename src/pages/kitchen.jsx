@@ -66,7 +66,7 @@ export default function Kitchen() {
           <Slider {...settings} className="carrossel">
             {
               table.map((item, index) => 
-                <Card key={index} button={()=>updateOrder(item.id)} mesa={item.mesa} horario={item.hora_inicio.toDate().toLocaleString('pt-BR')} nome={item.nome} pedido={item.pedido && item.pedido.map(item=>`${item.quantidade} ${item.descricao}`).join()} />
+                <Card key={index} button={()=>updateOrder(item.id)} textButton={"Pronto"} mesa={item.mesa} horario={item.hora_inicio.toDate().toLocaleString('pt-BR')} nome={item.nome} pedido={item.pedido && item.pedido.map(item=>`${item.quantidade} ${item.descricao}`).join()} />
               )
             }
         </Slider>

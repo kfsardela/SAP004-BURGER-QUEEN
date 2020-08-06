@@ -1,23 +1,14 @@
-*{
+* {
     box-sizing: border-box;
 }
-.kitchen-main{
+
+.kitchen-main {
     background-image: url("../images/img1.jpg");
     color: #EBBD47;
     height: 100vh;
     text-align: center;
     width: 100vw;
 }
-.headerSaloon{
-    display: flex;
-    justify-content: space-around;
-}
-
-.logoSaloon{
-    margin: auto;
-    width: 200px;
-}
-
 .cardPedido {
     background-image: url(../images/moldura.png);
     background-size: 100% 100%;
@@ -30,39 +21,42 @@
     padding-bottom: 90px;
     padding-top: 100px;
     width: 380px !important;
-
 }
 .time{
     font-size: 12px;
 }
 
-.pedido{
+.pedido {
     flex-grow: 1;
     width: 200px;
     margin: auto;
     margin-left: 90px;    
 }
-.btnPronto{
+
+.btnPronto {
     margin: auto !important;
-    width: 30%;
+    width: auto;
+    height: auto;
 }
 
 .carrossel {
     margin: 50px 50px;
 }
+
 @media only screen and (max-device-width: 460px) {
     .cardPedido {
         height: 250px;
         width: 200px !important;
         padding-bottom: 50px;
         padding-top: 60px;
+        font-size: 10px;
     }
-    .pedido{
+    .pedido {
         width: 100px;
         margin-left: 40px;
         font-size: 12px;
     }
-    .titleKitchen{
+    .titleKitchen {
         width: 280px;
     }
     .time{

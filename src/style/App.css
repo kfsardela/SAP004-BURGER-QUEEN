@@ -1,6 +1,14 @@
 *{
     box-sizing: border-box;
 }
+.headerSaloon {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logoSaloon {
+  width: 100px;
+}
 .App {
   text-align: center;
 }

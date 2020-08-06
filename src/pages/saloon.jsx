@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import firebaseFunctions from "../firebase";
 import "../style/reset.css";
-
 import CardapioItem from "../components/CardapioItem";
 import CafeManha from "../Json/CafeDaManha.json";
 import AlmocoJantar from "../Json/AlmocoJantar.json";

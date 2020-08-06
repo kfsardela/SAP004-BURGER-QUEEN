@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from '../images/logo2.png';
-import Logout from '../components/Logout';
+import Logout from './Logout';
 
 class Header extends Component {
     render() {

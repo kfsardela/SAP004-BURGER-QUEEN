@@ -1,14 +1,12 @@
-*{
+* {
     box-sizing: border-box;
 }
-.headerSaloon{
-    display: flex;
-    justify-content: space-between;
+.titleMenu{
+    width: 100%;
+    font-size: 24px;
+    margin-bottom: 16px;
 }
-.logoSaloon{
-    width: 100px;
-}
-.containerManha{
+.containerManha {
     height: 550px;
     overflow: auto;
     width: 400px;
@@ -26,74 +24,77 @@
     top: 30%;
     width: 300px;
 }
-.titleModal{
+
+.titleModal {
     color: rgb(33, 33, 189);
     font-size: 16px;
     font-weight: bold;
     margin: 10px;
 }
-.menuModal{
+
+.menuModal {
     font-weight: bold;
     padding-left: 20px;
     text-align: left;
 }
-.btnModal{
-    border-radius: 50px;    
+
+.btnModal {
+    background-color: #F8688B;
+    border-radius: 50px;
+    color: yellow;
     font-size: 20px;
-    font-weight: bold;    
-    width: 60px;
-    margin-top: 5px;
+    font-weight: bold;
+    width: auto;
 }
-.modalSpace{
+
+.modalSpace {
     margin: 5px;
 }
 
-.containerButtons{
+.containerButtons {
     display: flex;
 }
 
-.menuFlex{
+.menuFlex {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
     justify-content: space-around;
-    
-}
-.titleMenu{
-    width: 100%;
-    font-size: 24px;
-    margin-bottom: 16px;
 }
 
-.btnSaloon{
+.btnSaloon {
     border-color: #e3f11c;
     color: black;
     box-shadow: 0 0 40px 40px #e3f11c inset, 0 0 0 0 #e3f11c;
     -webkit-transition: all 150ms ease-in-out;
     transition: all 150ms ease-in-out;
     height: 40px;
-    margin: 20px;   
+    margin: 20px;
     width: 160px;
     font-weight: bold;
 }
+
 .btnSaloon:hover {
     box-shadow: 0 0 10px 0 #e3f11c inset, 0 0 10px 4px #e3f11c;
-    
 }
+
 .btnTest {
     background-color: transparent;
     border: 2px solid;
-    border-radius: 0.6em;    
+    border-radius: 0.6em;
     cursor: pointer;
     text-decoration: none;
     text-align: center;
     font-size: 14px;
 }
-.btnTest:hover, .btnTest:focus {
+
+.btnTest:hover,
+.btnTest:focus {
     color: #fff;
     outline: 0;
 }
-.btnItems{
+
+.btnItems {
     border-color: #3498db;
     color: #fff;
     box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
@@ -102,16 +103,18 @@
     margin: 10px 0;
     width: 100%;
 }
+
 .btnItems:hover {
     box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
-    
 }
-.containerOrder{
+
+.containerOrder {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
-.inputSaloon{
+
+.inputSaloon {
     border-radius: 50px;
     height: 30px;
     width: 80px;
