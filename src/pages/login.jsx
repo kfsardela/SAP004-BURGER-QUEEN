@@ -112,8 +112,8 @@ export default function Login() {
             <h2 className="sub-title">BEM VINDO(A)!</h2>       
           </Typography>
           <form className={classes.form} noValidate>
-            <Input className="input-login" placeholder= "E-mail" type="email" name='email' value={email} onChange={e=> setEmail(e.target.value)}/>
-            <Input className="input-login" placeholder= "Senha" type="password" name='password' value={password} onChange={e=> setPassword(e.target.value)}/>
+            <Input className="inputLogin" placeholder= "E-mail" type="email" name='email' value={email} onChange={e=> setEmail(e.target.value)}/>
+            <Input className="inputLogin" placeholder= "Senha" type="password" name='password' value={password} onChange={e=> setPassword(e.target.value)}/>
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"

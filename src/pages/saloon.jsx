@@ -38,6 +38,13 @@ class Saloon extends Component {
     nome: '',
     mesa: 0,
   };
+  
+  initialState = {
+    pedido: [],
+    total: 0,
+    nome: '',
+    mesa: 0,
+  };
 
 
 
@@ -123,6 +130,8 @@ class Saloon extends Component {
     } 
   };
   submitOrders = () => {
+    this.setState({ ...this.initialState });
+
     firebaseFunctions.db.collection("Orders").doc().set({
       nome: this.state.nome,
       mesa: this.state.mesa,
@@ -136,11 +145,13 @@ class Saloon extends Component {
     return (
       <main className="kitchen-main">
         <header className="headerSaloon">
-          <div></div>
+          <div className="headerLogo"></div>
           <h1>
             <img src={logo} className="logoSaloon"></img>
           </h1>
-            <Logout></Logout>
+          <div className="headerLogo">
+            <Logout></Logout> 
+          </div>
         </header>
           <h2><img src="./images/menu.png"/></h2>
         <section className= "containerOrder">  

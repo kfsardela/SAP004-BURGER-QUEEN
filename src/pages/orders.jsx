@@ -7,7 +7,6 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '../style/Kitchen.css';
 import Card from '../components/Card';
-import Button from "@material-ui/core/Button";
 
 export default function Orders() {
   const settings = {
@@ -51,9 +50,11 @@ export default function Orders() {
 
     return (
       <main className= "kitchen-main">
-        <header>
+        <header >
+        <div></div>
         <h1 ><img  src= {logo} className="logoSaloon"></img></h1>
-
+        <i class="fa fa-home" aria-hidden="true"></i>
+            <Logout></Logout>   
         </header>
         <h2><img src="./images/pedidos.png"/></h2>
           <Slider {...settings} className="carrossel">
@@ -68,7 +69,6 @@ export default function Orders() {
               
             }
         </Slider>
-        <Logout></Logout>   
       </main>
 
     );

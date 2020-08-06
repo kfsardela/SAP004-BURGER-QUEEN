@@ -9,7 +9,7 @@ class CardapioItem extends Component {
         console.log(imagem);
         return (
            
-                <li className="itemMenu"><img className="imgMenu" src={imagem}/><button onClick={onClick} className="btnItems btnTest"> {item}  <br/>  {valor}</button></li>
+                <li className="itemMenu"><img className="imgMenu" src={imagem}/><button onClick={onClick} className="btnItems btnTest"> {item}  <br/>  R$ {valor}</button></li>
 
         );
     }

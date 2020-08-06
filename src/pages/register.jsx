@@ -109,7 +109,7 @@ export default function Register() {
         <CssBaseline />
         <div className={classes.paper}>
           <Typography component="h1" variant="h5" className="link-login">
-            Cadastro
+          <h1><img src="./images/cadastro.png"/> </h1>
           </Typography>
           <form className={classes.form} noValidate>
             <Grid container spacing={2}>.
@@ -129,13 +129,13 @@ export default function Register() {
               </NativeSelect>
               </div>
               <Grid item xs={12}>
-              <Input placeholder= "Nome completo" type= "text" value={name} onChange={e=> setName(e.target.value)}/>
+              <Input placeholder= "Nome completo" type= "text" value={name} className="inputLogin" onChange={e=> setName(e.target.value)}/>
               </Grid>
               <Grid item xs={12}>
-              <Input placeholder= "E-mail" type= "email" value={email} onChange={e=> setEmail(e.target.value)}/>
+              <Input placeholder= "E-mail" type= "email" value={email} className="inputLogin" onChange={e=> setEmail(e.target.value)}/>
               </Grid>
               <Grid item xs={12}>
-              <Input placeholder= "Senha" type= "password" value={password} onChange={e=> setPassword(e.target.value)}/>
+              <Input placeholder= "Senha" type= "password" value={password} className="inputLogin" onChange={e=> setPassword(e.target.value)}/>
               </Grid>
             </Grid>
             <Button fullWidth variant="contained" color="primary" className="btn-register" onClick={register}>

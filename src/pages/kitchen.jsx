@@ -19,6 +19,15 @@ export default function Kitchen() {
       slidesToScroll: 2,
       autoplay: false,
       autoplaySpeed: 4000,
+      responsive: [
+        {
+          breakpoint: 900,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          }
+        }
+      ]
     };
 
     let [table, setTable] = useState([]);
@@ -54,11 +63,13 @@ export default function Kitchen() {
       
       <main className= "kitchen-main">
         <header className="headerSaloon">
-          <div></div>
+          <div className="headerLogo"></div>
           <h1 ><img  src= {logo} className="logoSaloon"></img></h1>
-            <Logout></Logout>   
+          <div className="headerLogo">
+            <Logout></Logout> 
+          </div>
         </header>
-        <h2><img src="./images/pedidos.png"/> <br></br> <img src="./images/pendentes.png"/></h2>
+        <h2><img className="titleKitchen" src="./images/pedidos.png"/> <br/> <img className="titleKitchen" src="./images/pendentes.png"/></h2>
           <Slider {...settings} className="carrossel">
             {
               table.map((item, index) => 

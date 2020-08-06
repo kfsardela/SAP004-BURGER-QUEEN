@@ -28,13 +28,13 @@
 }
 
 .reg-img{
-  background-image: url("/images/img1.jpg");
+  background-image: url("/images/friends.jpg");
   width: 100vw;
   height: 100vh;
   padding-top: 160px;
 }
 
-.input-login{
+.inputLogin{
   background-color: white;
   border-radius: 50px;
   font-size: 15px;
@@ -58,7 +58,7 @@
 
 .register{
   padding: 32px;
-  background-color: #1c0c21d7;
+  background-color: #000000;
   box-shadow: 5px 5px 1em #F8688B;
 }
 
