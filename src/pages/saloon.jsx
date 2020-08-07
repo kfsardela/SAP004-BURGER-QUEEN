@@ -131,28 +131,31 @@ class Saloon extends Component {
     } 
   };
   submitOrders = () => {
-    this.setState({ ...this.initialState });
-if (this.state.nome === "" || this.state.mesa === ""){
-  swal({
-    text: "Por favor, preencha o nome e o numero da mesa",
-    icon: "warning",
-    button: "Ok",
-  });
-}
-
-else{
-    firebaseFunctions.db.collection("Orders").doc().set({
-      nome: this.state.nome,
-      mesa: this.state.mesa,
-      pedido: this.state.pedido,
-      total: this.state.total,
-      hora_inicio: firebaseFunctions.firestore.Timestamp.fromDate(new Date()),
-      status: "pendente"
-    })
-    }}
-  render() {
-    return (
-      <main className="kitchen-main">
+    if (this.state.nome === "" || this.state.mesa === ""){
+      swal({
+        text: "Por favor, preencha o nome e o numero da mesa",
+        icon: "warning",
+        button: "Ok",
+      });
+    }
+    
+    else{
+      firebaseFunctions.db.collection("Orders").doc().set({
+        nome: this.state.nome,
+        mesa: this.state.mesa,
+        pedido: this.state.pedido,
+        total: this.state.total,
+        hora_inicio: firebaseFunctions.firestore.Timestamp.fromDate(new Date()),
+        status: "pendente"
+      })
+      
+      this.setState({ ...this.initialState });
+    }
+  
+  }
+    render() {
+      return (
+        <main className="kitchen-main">
         <Header isHome={false}/>
           <h2><img className="menu" src="./images/menu.png"/></h2>
         <section className= "containerOrder">  
