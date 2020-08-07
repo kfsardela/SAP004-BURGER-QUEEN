@@ -72,6 +72,9 @@ export default function Orders() {
               
             }
         </Slider>
+        
+        <a href="javascript:history.back()"><button className="btnSaloon btnTest">Voltar</button></a>
+
       </main>
 
     );

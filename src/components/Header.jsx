@@ -8,7 +8,7 @@ class Header extends Component {
         return (
             <header className="headerSaloon">
         <div className="headerLogo">
-            {isHome ? <i className="fa fa-home" aria-hidden="true"></i> : <i></i>}
+            {/* {isHome ? <i className="fa fa-home" aria-hidden="true"></i> : <i></i>} */}
         </div>
         <h1 ><img  src= {logo} className="logoSaloon"></img></h1>
         <div className="headerLogo">
