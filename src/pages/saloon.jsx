@@ -10,6 +10,8 @@ import BtnSaloon from "../components/Btn-Saloon"
 import Input from "../components/Input"
 import ModalBurger from "../components/ModalBurger"
 import Header from "../components/Header";
+import swal from 'sweetalert';
+
 
 const PedacoCardapio = props => {
   return (
@@ -130,7 +132,15 @@ class Saloon extends Component {
   };
   submitOrders = () => {
     this.setState({ ...this.initialState });
+if (this.state.nome === "" || this.state.mesa === ""){
+  swal({
+    text: "Por favor, preencha o nome e o numero da mesa",
+    icon: "warning",
+    button: "Ok",
+  });
+}
 
+else{
     firebaseFunctions.db.collection("Orders").doc().set({
       nome: this.state.nome,
       mesa: this.state.mesa,
@@ -139,7 +149,7 @@ class Saloon extends Component {
       hora_inicio: firebaseFunctions.firestore.Timestamp.fromDate(new Date()),
       status: "pendente"
     })
-    }
+    }}
   render() {
     return (
       <main className="kitchen-main">
