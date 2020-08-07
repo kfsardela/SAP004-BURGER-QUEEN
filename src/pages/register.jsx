@@ -105,11 +105,11 @@ export default function Register() {
 
   return (
     <main className= "reg-img">
-      <Container component="main" maxWidth="xs" className="register">
+      <Container component="main" maxWidth="sm" className="register">
         <CssBaseline />
         <div className={classes.paper}>
           <Typography component="h1" variant="h5" className="link-login">
-          <h1><img src="./images/cadastro.png"/> </h1>
+          <h1><img className="cadastro" src="./images/cadastro.png"/> </h1>
           </Typography>
           <form className={classes.form} noValidate>
             <Grid container spacing={2}>.

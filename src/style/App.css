@@ -1,6 +1,9 @@
 *{
     box-sizing: border-box;
 }
+.cadastro{
+  width: 400px;
+}
 .headerSaloon {
   display: flex;
   justify-content: space-between;
@@ -65,7 +68,7 @@
 }
 
 .register{
-  padding: 32px;
+  padding: 80px !important;
   background-color: #000000;
   box-shadow: 5px 5px 1em #F8688B;
 }
