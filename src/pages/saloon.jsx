@@ -184,7 +184,7 @@ class Saloon extends Component {
           <Input placeholder= "Nome" type="text" className= "inputSaloon"  onChange={e=> this.setState({nome:  e.target.value})}/>    
             <Tabela pedido={this.state.pedido} remove={this.remove} total={this.state.total}/>
             <BtnSaloon className="btnSaloon btnTest" text="Enviar" onClick={this.submitOrders}/>
-            <BtnSaloon className="btnSaloon btnTest" text="Pedidos prontos"/>
+            <a href="/orders"><button className="btnSaloon btnTest btnOrders">Pedidos prontos</button></a>
           </div> 
           
         </section>
