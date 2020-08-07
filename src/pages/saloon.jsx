@@ -138,6 +138,13 @@ class Saloon extends Component {
         button: "Ok",
       });
     }
+    else if (!this.state.pedido.length){
+      swal({
+        text: "Pedido Vazio, favor escolher algum item do cardapio",
+        icon: "warning",
+        button: "Ok",
+      });
+    }
     
     else{
       firebaseFunctions.db.collection("Orders").doc().set({
