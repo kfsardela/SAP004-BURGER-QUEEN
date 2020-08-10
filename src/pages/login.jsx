@@ -8,7 +8,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';  
 import Typography from '@material-ui/core/Typography';
-import { makeStyles, withTheme } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Input from '../components/Input';
 import swal from 'sweetalert';
 
@@ -108,8 +108,8 @@ export default function Login() {
         <div className={classes.paper}>
           
           <Typography component="h1" variant="h5" className= "welcome">
-            <h1><img className="imagemLogo" src="./images/fri.png"/> <br></br><img className="imagemTexto" src="./images/burguer.png"/></h1> 
-            <h2 className="sub-title">BEM VINDO(A)!</h2>       
+            <p><img alt="title1" className="imagemLogo" src="./images/fri.png"/> <br></br><img alt="title2"className="imagemTexto" src="./images/burguer.png"/></p> 
+            <p className="sub-title">BEM VINDO(A)!</p>       
           </Typography>
           <form className={classes.form} noValidate>
             <Input className="inputLogin" placeholder= "E-mail" type="email" name='email' value={email} onChange={e=> setEmail(e.target.value)}/>

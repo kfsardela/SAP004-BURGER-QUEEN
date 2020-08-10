@@ -7,7 +7,7 @@
     margin-bottom: 16px;
 }
 .containerManha {
-    height: 550px;
+    height: 540px;
     overflow: auto;
     width: 400px;
     background-color: rgba(228, 22, 176, 0.384);
@@ -122,33 +122,38 @@
  .tableOrder{
      padding: 20px;
      color: yellow;
- }
+}
  .tableItems{
      color: yellow;     
      margin: 10px;
- }
+}
  .headerLogo{
     width: 100px;
- }
+}
  .fa-trash{
      color: black;
      font-size: 25px;
      width: 100px;
- }
+}
  .imgMenu{
      width: 120px;
      height: 100px;
- }
+}
  .itemMenu{
      width: 150px;
- }
+}
  .orderSummary{
      background-color: rgba(228, 22, 176, 0.384);
      border-radius: 30px; 
+     overflow: auto;
      margin-top: 80px;
      padding: 20px;
      width: 450px;
- }
+     height: 540px;
+}
+.btnOrders{
+    margin:auto;
+}
  @media only screen and (max-device-width: 900px) {
 .logoSaloon{
     width: 200px;
@@ -156,7 +161,7 @@
 .btnSaloon{
     height: 40px;
     margin: 20px;   
-    width: 120px;
+    width: 140px;
 }
 .containerManha{
     height: 350px;
@@ -166,6 +171,7 @@
     width: 400px;
     padding: 10px;
     margin-top: 80px;
+    height: 350px;
 }
 .tableOrder{
     padding: 15px;
@@ -176,16 +182,15 @@
     width: 100px;
 }
 .containerManha{
-    height: 350px;
+    height: 250px;
     width: 350px;
 }
 .orderSummary{
-    margin-top: 70px;
+    margin-top: 60px;
+    height: 250px;
 }
 .btnSaloon{
-    height: 30px;
-    width: 120px;
-    font-size: 11px;
+    margin: 10px;
 }
 .imgMenu{
     width: 100px;

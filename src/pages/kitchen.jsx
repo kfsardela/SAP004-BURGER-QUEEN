@@ -14,7 +14,7 @@ export default function Kitchen() {
       infinite: false,
       speed: 500,
       slidesToShow: 2,
-      slidesToScroll: 2,
+      slidesToScroll: 1,
       autoplay: false,
       autoplaySpeed: 4000,
       responsive: [
@@ -61,7 +61,7 @@ export default function Kitchen() {
       
       <main className= "kitchen-main">
         <Header isHome={false}/>
-        <h2><img className="titleKitchen" src="./images/pedidos.png"/> <br/> <img className="titleKitchen" src="./images/pendentes.png"/></h2>
+        <h2><img alt="title6" className="titleKitchen" src="./images/pedidos.png"/> <br/> <img alt="title7" className="titleKitchen" src="./images/pendentes.png"/></h2>
           <Slider {...settings} className="carrossel">
             {
               table.map((item, index) => 

@@ -12,8 +12,8 @@ class ModalBurger extends Component {
     atualizaDescricao = descricao => {
         let hamburguer = "";
         let ovo = "";
-        let queijo = ""
-        console.log(this.checkOvo);
+        let queijo = "";
+ 
         for (let i = 0; i < this.radio.length; i++) {
             if (this.radio[i].checked) {
                 hamburguer = ` ${this.radio[i].value}`;

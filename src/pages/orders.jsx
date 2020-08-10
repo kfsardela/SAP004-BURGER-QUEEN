@@ -13,7 +13,7 @@ export default function Orders() {
       infinite: false,
       speed: 500,
       slidesToShow: 2,
-      slidesToScroll: 2,
+      slidesToScroll: 1,
       autoplay: false,
       autoplaySpeed: 4000,
       responsive: [
@@ -59,7 +59,7 @@ export default function Orders() {
     return (
       <main className= "kitchen-main">
         <Header isHome={true}/>
-        <h2><img src="./images/pedidos.png"/></h2>
+        <h2><img alt="title4" src="./images/pedidos.png"/></h2>
           <Slider {...settings} className="carrossel">
             {
               pedido.map((item, index) => 
