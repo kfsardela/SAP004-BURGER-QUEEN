@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import Saloon from '../pages/saloon';
-
 
 class BtnSaloon extends Component {
     render() {

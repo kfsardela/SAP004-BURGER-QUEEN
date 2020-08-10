@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useHistory } from "react-router-dom";
 import firebaseFunctions from "../firebase";
 import Button from "@material-ui/core/Button";
@@ -109,7 +109,7 @@ export default function Register() {
         <CssBaseline />
         <div className={classes.paper}>
           <Typography component="h1" variant="h5" className="link-login">
-          <h1><img className="cadastro" src="./images/cadastro.png"/> </h1>
+          <h1><img alt="title5"className="cadastro" src="./images/cadastro.png"/> </h1>
           </Typography>
           <form className={classes.form} noValidate>
             <Grid container spacing={2}>.
