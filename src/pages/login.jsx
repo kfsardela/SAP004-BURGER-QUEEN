@@ -108,7 +108,7 @@ export default function Login() {
         <div className={classes.paper}>
           
           <Typography component="h1" variant="h5" className= "welcome">
-            <p><img alt="title1" className="imagemLogo" src="./images/fri.png"/> <br></br><img alt="title2"className="imagemTexto" src="./images/burguer.png"/></p> 
+            <p><img alt="title1" className="imagemLogo" src="./images/fri.png"/> <br></br><img alt="title2"className="imagemTexto" src="./images/burger.png"/></p> 
             <p className="sub-title">BEM VINDO(A)!</p>       
           </Typography>
           <form className={classes.form} noValidate>
