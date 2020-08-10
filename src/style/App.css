@@ -94,6 +94,17 @@
   color: #EBBD47 !important;
 }
 
+.footer{
+  background: rgb(247, 209, 85);
+  bottom: 0;
+  font-size: 20px;
+  font-weight: bold;
+  height: 30px;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
