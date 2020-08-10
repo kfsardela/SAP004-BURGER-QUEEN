@@ -60,6 +60,7 @@ export default function Orders() {
       <main className= "kitchen-main">
         <Header isHome={true}/>
         <h2><img src="./images/pedidos.png"/></h2>
+        
           <Slider {...settings} className="carrossel">
             {
               pedido.map((item, index) => 
