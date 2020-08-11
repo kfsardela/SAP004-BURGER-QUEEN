@@ -39,7 +39,7 @@
 }
 
 .reg-img{
-  background-image: url("/images/friends.jpg");
+  background-image: url("/images/img1.jpg");
   width: 100vw;
   height: 100vh;
   padding-top: 160px;
@@ -69,7 +69,7 @@
 
 .register{
   padding: 80px !important;
-  background-color: #000000;
+  background-color: rgba(92, 14, 92, 0.507);
   box-shadow: 5px 5px 1em #F8688B;
 }
 
