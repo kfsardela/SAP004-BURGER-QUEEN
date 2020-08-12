@@ -11,6 +11,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Input from '../components/Input';
 import swal from 'sweetalert';
+import Footer from '../components/Footer'
 
 
 
@@ -127,12 +128,7 @@ export default function Login() {
             >
               Logar
             </Button>
-            <Grid container>
-              <Grid item xs>
-                <Link href="#" variant="body2" className= "link-login">
-                  Esqueceu a senha?
-                </Link>
-              </Grid>
+            <Grid container>              
               <Grid item>
                 <Link href="/register" variant="body2" className= "link-login">
                   {"Não tem conta? Cadastre-se"}
@@ -142,6 +138,7 @@ export default function Login() {
           </form>
         </div>
       </Grid>
+      <Footer/>
     </Grid>
   );
   };

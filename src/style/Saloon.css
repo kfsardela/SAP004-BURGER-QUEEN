@@ -116,8 +116,9 @@
 
 .inputSaloon {
     border-radius: 50px;
-    height: 30px;
-    width: 80px;
+    height: 40px;
+    width: 120px;
+    margin-left: 15px;
 }
  .tableOrder{
      padding: 20px;

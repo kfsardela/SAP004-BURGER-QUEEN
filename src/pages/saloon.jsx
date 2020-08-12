@@ -160,7 +160,10 @@ class Saloon extends Component {
           ),
           status: "pendente",
         });
-
+      const inputs= document.querySelectorAll(".inputSaloon");
+      inputs.forEach((item,index)=> {
+        item.value= "";
+      })
       this.setState({ ...this.initialState });
     }
   };
