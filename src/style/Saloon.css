@@ -1,11 +1,13 @@
 * {
     box-sizing: border-box;
 }
-.titleMenu{
+
+.titleMenu {
     width: 100%;
     font-size: 24px;
     margin-bottom: 16px;
 }
+
 .containerManha {
     height: 540px;
     overflow: auto;
@@ -115,142 +117,156 @@
 }
 
 .inputSaloon {
-    border-radius: 50px;
+    border-radius: 15px;
     height: 40px;
     width: 120px;
     margin-left: 15px;
 }
- .tableOrder{
-     padding: 20px;
-     color: yellow;
+
+.inputName {
+    width: 180px;
 }
- .tableItems{
-     color: yellow;     
-     margin: 10px;
+
+.tableOrder {
+    padding: 20px;
+    color: yellow;
 }
- .headerLogo{
-    width: 100px;
-}
- .fa-trash{
-     color: black;
-     font-size: 25px;
-     width: 100px;
-}
- .imgMenu{
-     width: 120px;
-     height: 100px;
-}
- .itemMenu{
-     width: 150px;
-}
- .orderSummary{
-     background-color: rgba(228, 22, 176, 0.384);
-     border-radius: 30px; 
-     overflow: auto;
-     margin-top: 80px;
-     padding: 20px;
-     width: 450px;
-     height: 540px;
-}
-.btnOrders{
-    margin:auto;
-}
- @media only screen and (max-device-width: 900px) {
-.logoSaloon{
-    width: 200px;
-}
-.btnSaloon{
-    height: 40px;
-    margin: 20px;   
-    width: 140px;
-}
-.containerManha{
-    height: 350px;
-    width: 350px;
-}
-.orderSummary{
-    width: 400px;
-    padding: 10px;
-    margin-top: 80px;
-    height: 350px;
-}
-.tableOrder{
-    padding: 15px;
-}
- }
- @media only screen and (max-device-width: 780px) {
-.logoSaloon{
-    width: 100px;
-}
-.containerManha{
-    height: 250px;
-    width: 350px;
-}
-.orderSummary{
-    margin-top: 60px;
-    height: 250px;
-}
-.btnSaloon{
+
+.tableItems {
+    color: yellow;
     margin: 10px;
 }
-.imgMenu{
-    width: 100px;
-    height: 80px;
-}
-.btnItems{
-width: 130px;
-height: 35px;
-font-size: 10px;
-}
-.orderSummary{
-    width: 350px;
-}
-.tableOrder{
-    padding: 8px;
-}
- }
- @media only screen and (max-device-width: 470px) {
-.logoSaloon{
-    width: 70px;
-}
-.containerManha{
-    height: 150px;
-    width: 300px;
-}
-.orderSummary{
-    width: 300px;
-    font-size: 15px;
-    margin-top: 30px;
-}
-.tableOrder{
-    padding: 4px;
-    
-}
-.btnSaloon{
-    height: 30px;
-    margin: 20px;   
-    width: 100px;
-    font-size: 10px;
-}
-.imgMenu{
-    display: none;
-}
-.btnItems{
-width: 100px;
-height: 35px;
-font-size: 10px;
-}
-.titleMenu{
-    font-size: 16px;
-}
-.menu{
+
+.headerLogo {
     width: 100px;
 }
-.fa-trash{
-    font-size: 15px;
-    width: 50px;
+
+.fa-trash {
+    color: black;
+    font-size: 25px;
+    width: 100px;
 }
-.modalBurgers{
-    left: 5%;
+
+.imgMenu {
+    width: 120px;
+    height: 100px;
 }
- }
+
+.itemMenu {
+    width: 150px;
+}
+
+.orderSummary {
+    background-color: rgba(228, 22, 176, 0.384);
+    border-radius: 30px;
+    overflow: auto;
+    margin-top: 80px;
+    padding: 20px;
+    width: 450px;
+    height: 540px;
+}
+
+.btnOrders {
+    margin: auto;
+}
+
+@media only screen and (max-device-width: 900px) {
+    .logoSaloon {
+        width: 200px;
+    }
+    .btnSaloon {
+        height: 40px;
+        margin: 20px;
+        width: 140px;
+    }
+    .containerManha {
+        height: 350px;
+        width: 350px;
+    }
+    .orderSummary {
+        width: 400px;
+        padding: 10px;
+        margin-top: 80px;
+        height: 350px;
+    }
+    .tableOrder {
+        padding: 15px;
+    }
+}
+
+@media only screen and (max-device-width: 780px) {
+    .logoSaloon {
+        width: 100px;
+    }
+    .containerManha {
+        height: 250px;
+        width: 350px;
+    }
+    .orderSummary {
+        margin-top: 60px;
+        height: 250px;
+    }
+    .btnSaloon {
+        margin: 10px;
+    }
+    .imgMenu {
+        width: 100px;
+        height: 80px;
+    }
+    .btnItems {
+        width: 130px;
+        height: 35px;
+        font-size: 10px;
+    }
+    .orderSummary {
+        width: 350px;
+    }
+    .tableOrder {
+        padding: 8px;
+    }
+}
+
+@media only screen and (max-device-width: 470px) {
+    .logoSaloon {
+        width: 70px;
+    }
+    .containerManha {
+        height: 150px;
+        width: 300px;
+    }
+    .orderSummary {
+        width: 300px;
+        font-size: 15px;
+        margin-top: 30px;
+    }
+    .tableOrder {
+        padding: 4px;
+    }
+    .btnSaloon {
+        height: 30px;
+        margin: 20px;
+        width: 100px;
+        font-size: 10px;
+    }
+    .imgMenu {
+        display: none;
+    }
+    .btnItems {
+        width: 100px;
+        height: 35px;
+        font-size: 10px;
+    }
+    .titleMenu {
+        font-size: 16px;
+    }
+    .menu {
+        width: 100px;
+    }
+    .fa-trash {
+        font-size: 15px;
+        width: 50px;
+    }
+    .modalBurgers {
+        left: 5%;
+    }
+}

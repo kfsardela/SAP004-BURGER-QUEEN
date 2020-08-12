@@ -7,6 +7,7 @@ import '../style/Kitchen.css';
 import Card from '../components/Card';
 import Header from "../components/Header";
 
+
 export default function Orders() {
   const settings = {
       dots: false,
@@ -58,7 +59,7 @@ export default function Orders() {
     return (
       <main className= "kitchen-main">
         <Header isHome={true}/>
-        <h2><img alt="title4" src="./images/pedidos.png"/></h2>
+        <p><img alt="title4" className="imgProntos" src="./images/pedidos.png"/><br></br><img alt="title4" className="imgProntos" src="./images/prontos.png"/></p>
           <Slider {...settings} className="carrossel">
             {
               pedido.map((item, index) => 
@@ -73,8 +74,10 @@ export default function Orders() {
         </Slider>
         
         <a href="javascript:history.back()"><button className="btnSaloon btnTest">Voltar</button></a>
+        
 
       </main>
-
+  
     );
+ 
   }

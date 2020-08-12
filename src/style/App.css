@@ -1,151 +1,159 @@
-*{
+* {
     box-sizing: border-box;
 }
-.cadastro{
-  width: 400px;
+
+.cadastro {
+    width: 400px;
 }
+
 .headerSaloon {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
 .logoSaloon {
-  width: 100px;
+    width: 100px;
 }
+
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-.welcome{
-  color: white;
-  margin-top: 100px !important;
-  width: 100% !important;
+    height: 40vmin;
+    pointer-events: none;
 }
 
+.welcome {
+    color: white;
+    margin-top: 100px !important;
+    width: 100% !important;
+}
 
 .imagemLogo,
-.imagemTexto{
-  width: 100%;
+.imagemTexto {
+    width: 100%;
 }
 
-.sub-title{
-  margin-top: 20px ;
-  text-align: center;
-
+.imgProntos {
+    width: 28%;
 }
 
-.reg-img{
-  background-image: url("/images/img1.jpg");
-  width: 100vw;
-  height: 100vh;
-  padding-top: 160px;
+.sub-title {
+    margin-top: 20px;
+    text-align: center;
 }
 
-.inputLogin{
-  background-color: white;
-  border-radius: 50px;
-  font-size: 15px;
-  height: 40px;
-  width: 100%;
-  margin-top: 20px;
+.reg-img {
+    background-image: url("../images/img1.jpg");
+    width: 100vw;
+    height: 100vh;
+    padding-top: 160px;
 }
 
-.Reg-select{
-  display: flex;
-  justify-content: space-between;
-  padding: 8px;
-  width: 100%;
+.inputLogin {
+    background-color: white;
+    border-radius: 50px;
+    font-size: 15px;
+    height: 40px;
+    width: 100%;
+    margin-top: 20px;
 }
 
-.select-option{
-  background-color: white;
-  border-radius: 30px;
-  height: 30px;
+.Reg-select {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    width: 100%;
 }
 
-.register{
-  padding: 80px !important;
-  background-color: rgba(92, 14, 92, 0.507);
-  box-shadow: 5px 5px 1em #F8688B;
+.select-option {
+    background-color: white;
+    border-radius: 30px;
+    height: 30px;
 }
 
-.btn{
-  background-color: #F8688B !important;
-  border-radius: 50px !important;
-  width: 180px;
-  margin: 30px 0 !important;
+.register {
+    padding: 80px !important;
+    background-color: rgba(92, 14, 92, 0.507);
+    box-shadow: 5px 5px 1em #F8688B;
 }
 
-.btn :target{
-  background-color: purple !important;
+.btn {
+    background-color: #F8688B !important;
+    border-radius: 50px !important;
+    width: 180px;
+    margin: 30px 0 !important;
 }
 
-.btn-register{
-  background-color: #F8688B !important;
-  border-radius: 50px !important;
-  margin-top: 30px !important;
+.btn :target {
+    background-color: purple !important;
 }
 
-.link-login{
-  color: #EBBD47 !important;
+.btn-register {
+    background-color: #F8688B !important;
+    border-radius: 50px !important;
+    margin-top: 30px !important;
 }
 
-.footer{
-  background: rgb(247, 209, 85);
-  bottom: 0;
-  font-size: 20px;
-  font-weight: bold;
-  height: 30px;
-  position: fixed;
-  text-align: center;
-  width: 100%;
-  
+.link-login {
+    color: #EBBD47 !important;
 }
+
+.footer {
+    background: black;
+    color: rgb(115, 7, 125);
+    bottom: 0;
+    font-size: 20px;
+    font-weight: bold;
+    height: 30px;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+}
+
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .App-link {
-  color: #61dafb;
-}
-.fa-sign-out{
-  font-size: 25px !important;
-  padding: 20px;
-}
-.fa-home{
-  font-size: 25px !important;
-  padding: 20px;  
+    color: #61dafb;
 }
 
+.fa-sign-out {
+    font-size: 25px !important;
+    padding: 20px;
+}
+
+.fa-home {
+    font-size: 25px !important;
+    padding: 20px;
+}
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
-@media only screen and (max-device-width: 470px){
-  .cadastro{
-    width: 250px;
-  }
 
+@media only screen and (max-device-width: 470px) {
+    .cadastro {
+        width: 250px;
+    }
 }

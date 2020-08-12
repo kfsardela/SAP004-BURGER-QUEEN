@@ -9,7 +9,6 @@ const TableHead = () => {
                 <th className="tableOrder">Quantidade</th>
                 <th className="tableOrder">Descrição</th>
                 <th className="tableOrder">Preços</th>
-                <th className="tableOrder">Remover</th>
             </tr>
         </thead>
     )

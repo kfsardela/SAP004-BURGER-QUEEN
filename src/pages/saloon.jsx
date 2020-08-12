@@ -205,7 +205,7 @@ class Saloon extends Component {
             <Input
               placeholder="Nome"
               type="text"
-              className="inputSaloon"
+              className="inputSaloon inputName"
               onChange={(e) => this.setState({ nome: e.target.value })}
             />
             <Tabela
