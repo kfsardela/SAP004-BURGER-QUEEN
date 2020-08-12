@@ -4,7 +4,7 @@
 ## 1. Definição do produto
 Friends Burger é uma plataforma desenvolvida para uma pequena hamburgueria que está crescendo e necessita de uma interface em que se possa realizar pedidos utilizando um tablet, e enviá-los para a cozinha para que sejam preparados de forma ordenada e eficiente.
 
- [Clique aqui para acessar o Friends Burger.](https://burger-queen-sap004.web.app/)
+ [Clique aqui](https://burger-queen-sap004.web.app/) para acessar o Friends Burger.
 
 ## 2. Usuário
 
@@ -36,19 +36,19 @@ Marque os pedidos que foram entregues.
 ## 4. Protótipo de baixa fidelidade 
   * Pagina de Login:
 
-  <img src="./public/images/figma_login.png" alt="" width="200px">
+  <img src="./public/images/figma_login.png" alt="" width="500px">
 
   * Pagina de Cadastro:
 
-  <img src="./public/images/figma_register.png" alt="" width="200px">
+  <img src="./public/images/figma_register.png" alt="" width="500px">
 
   * Pagina do salão:
 
-  <img src="./public/images/figma_saloon.png" alt="" width="200px">
+  <img src="./public/images/figma_saloon.png" alt="" width="500px">
 
   * Pagina da cozinha:
 
-  <img src="./public/images/figma_kitchen.png" alt="" width="200px">
+  <img src="./public/images/figma_kitchen.png" alt="" width="500px">
 
 
 ## 5. Testes de usabilidade
