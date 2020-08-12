@@ -1,68 +1,58 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Friends Burger
 
-## Available Scripts
 
-In the project directory, you can run:
+## 1. Definição do produto
+Friends Burger é uma plataforma desenvolvida para uma pequena hamburgueria que está crescendo e necessita de uma interface em que se possa realizar pedidos utilizando um tablet, e enviá-los para a cozinha para que sejam preparados de forma ordenada e eficiente.
 
-### `yarn start`
+ [Clique aqui para acessar o Friends Burger.](https://burger-queen-sap004.web.app/)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 2. Usuário
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+O Projeto foi pensado e desenvolvido para funcionários de um restaurante, como o funcionário que anota os pedidos dos clientes, e o funcionário que prepara os pedios. 
 
-### `yarn test`
+## 3. Funcionalidades
+Para esse projeto, nos foi passado as Historias de Usuário abaixo, todas foram implementadas.
+* História de usuário 1: Usuário deve ter seu perfil (login/senha) para acessar o sistema.
+Critérios de aceitação: Criar login e senha;
+Registar tipo de usuário (cozinha / salão), login e senha;
+Entrar na tela correta para cada usuário.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* História de usuário 2: Garçom/Garçonete deve poder anotar o seu pedido. Critérios de aceitação: Anotar o nome e mesa;
+Adicionar produtos aos pedidos; 
+Excluir produtos; 
+Ver resumo e o total da compra; 
+Enviar o pedido para a cozinha (guardar em algum banco de dados).
 
-### `yarn build`
+* História de usuário 3: Chefe de cozinha deve ver os pedidos. Critérios de aceitação:
+Ver os pedidos à medida em que são feitos;
+Marcar os pedidos que foram preparados e estão prontos para serem servidos;
+Ver o tempo que levou para preparar o pedido desde que chegou, até ser marcado como concluído.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* História de usuário 4: Garçom/Garçonete deve ver os pedidos prontos para servir. Critérios de aceitação: 
+Ver a lista de pedidos prontos para servir;
+Marque os pedidos que foram entregues.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 4. Protótipo de baixa fidelidade 
 
-### `yarn eject`
+## 5. Testes de usabilidade
+Durante o desenvolvimento do projeto, fizemos os testes de usabilidades com usuários, que nos retornaram feedbacks muito importantes para a melhoria do projeto, várias sugestões foram implementadas, possibilitando uma melhor experiência para o usuário.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 6. Interface
+A interface foi desenvolvida com design responsivo, simples e intuitivo, usando como  tema a série de TV "Friends".
+Após implementação das melhorias sugeridas pela pesquisa de usabilidade, a interface final ficou assim:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 7. Considerações técnicas
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Ferramentas utilizadas no projeto:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+* HTML, CSS, JavaScript, React.js, React Hooks,React Router, Node.js, Npm, Firebase, Material UI, Figma, Git e GitHub.
 
-## Learn More
+## Autoras
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+[Karine Sardela](https://github.com/kfsardela) e [Aline Rozetti ](https://github.com/alinerozetti).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Projeto desenvolvido para fins de aprendizado no Bootcamp da [Laboratória Brasil](https://www.laboratoria.la/br). 
 
-### Code Splitting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
