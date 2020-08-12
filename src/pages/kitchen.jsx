@@ -49,7 +49,6 @@ export default function Kitchen() {
       })
     })
     const updateOrder = (id) => {
-      console.log(id)
       firebaseFunctions.db.collection("Orders").doc(id).update({
         hora_fim: firebaseFunctions.firestore.Timestamp.fromDate(new Date()),
         status: "pronto"

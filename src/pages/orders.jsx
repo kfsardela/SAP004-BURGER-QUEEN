@@ -48,7 +48,6 @@ export default function Orders() {
       })
     }, [])
     const updateOrder = (id) => {
-      console.log(id)
       firebaseFunctions.db.collection("Orders").doc(id).update({
         status: "entregue"
       

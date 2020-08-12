@@ -34,13 +34,29 @@ Marque os pedidos que foram entregues.
 
 
 ## 4. Protótipo de baixa fidelidade 
+  * Pagina de Login:
+
+  <img src="./public/images/figma_login.png" alt="" width="200px">
+
+  * Pagina de Cadastro:
+
+  <img src="./public/images/figma_register.png" alt="" width="200px">
+
+  * Pagina do salão:
+
+  <img src="./public/images/figma_saloon.png" alt="" width="200px">
+
+  * Pagina da cozinha:
+
+  <img src="./public/images/figma_kitchen.png" alt="" width="200px">
+
 
 ## 5. Testes de usabilidade
 Durante o desenvolvimento do projeto, fizemos os testes de usabilidades com usuários, que nos retornaram feedbacks muito importantes para a melhoria do projeto, várias sugestões foram implementadas, possibilitando uma melhor experiência para o usuário.
 
 ## 6. Interface
 A interface foi desenvolvida com design responsivo, simples e intuitivo, usando como  tema a série de TV "Friends".
-Após implementação das melhorias sugeridas pela pesquisa de usabilidade, a interface final ficou assim:
+
 
 ## 7. Considerações técnicas
 
