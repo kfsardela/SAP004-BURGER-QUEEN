@@ -95,7 +95,7 @@ class Saloon extends Component {
   atualizaPedido = (pedido, valor) => {
     let existe = false;
 
-    this.state.pedido.map((item, index) => {
+    this.state.pedido.forEach((item, index) => {
       if (item.descricao === pedido) {
         this.state.pedido[index].quantidade++;
         this.state.pedido[index].preco += valor;
@@ -173,7 +173,7 @@ class Saloon extends Component {
       <main className="kitchen-main">
         <Header isHome={false} />
         <h2>
-          <img className="menu" src="./images/menu.png" />
+          <img alt="title8" className="menu" src="./images/menu.png" />
         </h2>
         <section className="containerOrder">
           <div>

@@ -109,7 +109,7 @@ export default function Register() {
         <CssBaseline />
         <div className={classes.paper}>
           <Typography component="h1" variant="h5" className="link-login">
-          <h1><img alt="title5"className="cadastro" src="./images/cadastro.png"/> </h1>
+          <p><img alt="title5"className="cadastro" src="./images/cadastro.png"/> </p>
           </Typography>
           <form className={classes.form} noValidate>
             <Grid container spacing={2}>.
@@ -119,8 +119,7 @@ export default function Register() {
                 value={section}
                 onChange= {e=> setSection(e.target.value)}
                 name="section"
-                className={classes.selectEmpty} 
-                className="select-option"
+                className={[classes.selectEmpty, "select-option"]} 
                 inputProps={{ "aria-label": "age" }}
               >
                 <option value="" hidden>Selecionar</option>

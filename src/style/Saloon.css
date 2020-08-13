@@ -74,6 +74,7 @@
     margin: 20px;
     width: 160px;
     font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .btnSaloon:hover {
@@ -160,7 +161,7 @@
     background-color: rgba(228, 22, 176, 0.384);
     border-radius: 30px;
     overflow: auto;
-    margin-top: 80px;
+    margin-top: 70px;
     padding: 20px;
     width: 450px;
     height: 540px;
