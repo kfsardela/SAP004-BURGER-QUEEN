@@ -120,7 +120,6 @@ export default function Register() {
                 onChange= {e=> setSection(e.target.value)}
                 name="section"
                 className={[classes.selectEmpty, "select-option"]} 
-                // className="select-option"
                 inputProps={{ "aria-label": "age" }}
               >
                 <option value="" hidden>Selecionar</option>
