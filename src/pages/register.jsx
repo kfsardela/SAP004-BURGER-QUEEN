@@ -109,7 +109,7 @@ export default function Register() {
         <CssBaseline />
         <div className={classes.paper}>
           <Typography component="h1" variant="h5" className="link-login">
-          <h1><img alt="title5"className="cadastro" src="./images/cadastro.png"/> </h1>
+          <p><img alt="title5"className="cadastro" src="./images/cadastro.png"/> </p>
           </Typography>
           <form className={classes.form} noValidate>
             <Grid container spacing={2}>.

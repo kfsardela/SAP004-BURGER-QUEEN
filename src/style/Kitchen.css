@@ -17,11 +17,11 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    height: 430px;
+    height: 400px;
     margin: 0 auto;
     padding-bottom: 90px;
     padding-top: 100px;
-    width: 380px !important;
+    width: 330px !important;
 }
 
 .time {
@@ -30,7 +30,7 @@
 
 .pedido {
     flex-grow: 1;
-    width: 200px;
+    width: 150px;
     margin: auto;
     margin-left: 90px;
     color: rgb(5, 34, 122);
