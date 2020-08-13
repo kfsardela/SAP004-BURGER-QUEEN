@@ -36,16 +36,16 @@ export default function Orders() {
       .where("status", "==", "pronto")
       .orderBy("hora_fim", "asc")
       .onSnapshot(function(querySnapshot){
-        let pedidoList = [];
+        let orderList = [];
 
         querySnapshot.docs.forEach(function(doc) {
-          pedidoList.push({
+          orderList.push({
             id:doc.id,
             ...doc.data()}
             );
 
         });
-        setPedido(pedidoList)
+        setPedido(orderList)
       })
     }, [])
     const updateOrder = (id) => {
@@ -59,7 +59,7 @@ export default function Orders() {
     return (
       <main className= "kitchen-main">
         <Header isHome={true}/>
-        <p><img alt="title4" className="imgProntos" src="./images/pedidos.png"/><br></br><img alt="title4" className="imgProntos" src="./images/prontos.png"/></p>
+        <p><img alt="title4" className="imgProntos" src="./images/pedidosp.png"/><br></br><img alt="title4" className="imgProntos" src="./images/prontos.png"/></p>
           <Slider {...settings} className="carrossel">
             {
               pedido.map((item, index) => 
@@ -75,7 +75,6 @@ export default function Orders() {
         
         <a href="javascript:history.back()"><button className="btnSaloon btnTest">Voltar</button></a>
         
-
       </main>
   
     );
