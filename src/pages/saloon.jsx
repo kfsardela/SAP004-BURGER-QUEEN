@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import firebaseFunctions from "../firebase";
 import "../style/reset.css";
-import CardapioItem from "../components/CardapioItem";
+import MenuItem from "../components/MenuItem";
 import CafeManha from "../Json/CafeDaManha.json";
 import AlmocoJantar from "../Json/AlmocoJantar.json";
 import Tabela from "../components/Tabela";
@@ -12,16 +12,16 @@ import ModalBurger from "../components/ModalBurger";
 import Header from "../components/Header";
 import swal from "sweetalert";
 
-const PedacoCardapio = (props) => {
+const SubMenu = (props) => {
   return (
     <ul className="menuFlex">
       <h3 className="titleMenu">{props.itens.titulo}</h3>
       {props.itens.conteudo.map((item, index) => (
-        <CardapioItem
+        <MenuItem
           onClick={() =>
             item.descricao.includes("hambúrguer")
-              ? props.atualizaBurger(item.descricao, item.preco)
-              : props.atualizaPedido(item.descricao, item.preco)
+              ? props.updateBurger(item.descricao, item.preco)
+              : props.updatePedido(item.descricao, item.preco)
           }
           key={index}
           item={item.descricao}
@@ -51,27 +51,27 @@ class Saloon extends Component {
   selectMenu = (opcao) => {
     switch (opcao) {
       case "manha":
-        this.renderizaCardapio(CafeManha);
+        this.renderMenu(CafeManha);
         break;
       case "almoco":
-        this.renderizaCardapio(AlmocoJantar);
+        this.renderMenu(AlmocoJantar);
         break;
       default: 
-      this.renderizaCardapio(CafeManha);
+      this.renderMenu(CafeManha);
       break;
     }
   };
 
-  renderizaCardapio = (tipoCardapio) => {
-    const cardapio = document.getElementById("containerCardapio");
+  renderMenu = (tipoCardapio) => {
+    const cardapio = document.getElementById("containerMenu");
     ReactDOM.render(
       <ul className="menuMenu">
         {tipoCardapio.map((tipo, i) => (
-          <PedacoCardapio
+          <SubMenu
             key={i}
             itens={tipo}
-            atualizaPedido={this.atualizaPedido}
-            atualizaBurger={this.atualizaBurger}
+            updatePedido={this.updatePedido}
+            updateBurger={this.updateBurger}
           />
         ))}
       </ul>,
@@ -79,20 +79,20 @@ class Saloon extends Component {
     );
   };
 
-  atualizaBurger = (burger, preco) => {
+  updateBurger = (burger, preco) => {
     const cardapio = document.getElementById("divModal");
 
     ReactDOM.render(
       <ModalBurger
         item={burger}
         valor={preco}
-        atualizaPedido={this.atualizaPedido}
+        updatePedido={this.updatePedido}
       />,
       cardapio
     );
   };
 
-  atualizaPedido = (pedido, valor) => {
+  updatePedido = (pedido, valor) => {
     let existe = false;
 
     this.state.pedido.forEach((item, index) => {
@@ -193,7 +193,7 @@ class Saloon extends Component {
                 text="ALMOÇO E JANTAR"
               />
             </div>
-            <div id="containerCardapio" className="containerManha"></div>
+            <div id="containerMenu" className="containerManha"></div>
           </div>
           <div className="orderSummary">
             <Input

@@ -35,7 +35,7 @@ class ModalBurger extends Component {
     }
 
     render() {
-        const { item, valor, atualizaPedido } = this.props;
+        const { item, valor, updatePedido } = this.props;
         return (
 
             <div className="modalBurgers">
@@ -60,7 +60,7 @@ class ModalBurger extends Component {
                 <BtnSaloon className="btnModal btnTest" text="ok" onClick={() => {
                     const textoFinal = this.atualizaDescricao(item);
                     const valorFinal = this.atualizaPreco(valor);
-                    atualizaPedido(textoFinal, valorFinal);
+                    updatePedido(textoFinal, valorFinal);
                     var container = ReactDOM.findDOMNode(this).parentNode;
                     ReactDOM.unmountComponentAtNode(container);
                 }}></BtnSaloon>

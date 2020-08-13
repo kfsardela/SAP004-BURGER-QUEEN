@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import "../style/Saloon.css"
 
 
-class CardapioItem extends Component {
+class MenuItem extends Component {
 
     render() {
         const { item, valor, onClick, imagem } = this.props;
@@ -15,4 +15,4 @@ class CardapioItem extends Component {
     }
 }
 
-export default CardapioItem;
+export default MenuItem;
