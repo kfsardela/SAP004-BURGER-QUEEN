@@ -219,9 +219,7 @@ class Saloon extends Component {
               onClick={this.submitOrders}
             />
             <a href="/orders">
-              <button className="btnSaloon btnTest btnOrders">
-                Pedidos prontos
-              </button>
+            <BtnSaloon className="btnSaloon btnTest btnOrders" text="Pedidos Prontos"></BtnSaloon>
             </a>
           </div>
         </section>

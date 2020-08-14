@@ -31,7 +31,7 @@
 
 .pedido {
     flex-grow: 1;
-    width: 150px;
+    width: 178px;
     margin: auto;
     margin-left: 80px;
     color: rgb(5, 34, 122);
@@ -47,6 +47,12 @@
 
 .carrossel {
     margin: 50px 50px;
+}
+.dadosPedido{
+    font-size: 14px;
+}
+.time{
+    font-size: 14px;
 }
 @media only screen and (max-device-width: 980px) {
     .cardPedido {
@@ -64,6 +70,10 @@
     .dadosPedido{
         margin-left: 60px;
         font-size: 12px;
+        width: 130px;
+    }
+    .time{
+        font-size: 11px;
     }
 }
 @media only screen and (max-device-width: 780px) {
@@ -82,6 +92,9 @@
     .pedido{
         margin-left: 60px;
         width: 130px;
+    }
+    .time{
+        font-size: 10px;
     }
 }
 @media only screen and (max-device-width: 460px) {
@@ -102,6 +115,10 @@
         width: 100px;
         margin: 10px auto;
         margin-left: 50px; 
-        font-size: 10px;
+        font-size: 8px;
+    }
+    .time{
+        width: 108px;
+        font-size: 9px;
     }
 }
