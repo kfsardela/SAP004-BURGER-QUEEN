@@ -7,6 +7,7 @@ import "../style/Kitchen.css";
 import Card from "../components/Card";
 import Header from "../components/Header";
 
+
 export default function Orders() {
   const settings = {
     dots: false,
@@ -46,10 +47,11 @@ export default function Orders() {
         setPedido(pedidoList);
       });
   }, []);
-  const updateOrder = (id) => {
-    firebaseFunctions.db.collection("Orders").doc(id).update({
+  const updateOrder = async (id) => {
+    await firebaseFunctions.db.collection("Orders").doc(id).update({
       status: "entregue",
     });
+    return;
   };
 
   return (
@@ -60,9 +62,9 @@ export default function Orders() {
         <br></br>
         <img alt="title4" className="imgProntos" src="./images/prontos.png" />
       </p>
+      
       <Slider {...settings} className="carrossel">
         {pedido.map((item, index) => {
-          //Tempo de preparo
           const diff = Math.round(
             (item.hora_fim.toDate().getTime() -
               item.hora_inicio.toDate().getTime()) /

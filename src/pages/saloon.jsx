@@ -133,7 +133,7 @@ class Saloon extends Component {
     this.setState({ total: this.state.total - precoUnit });
   };
 
-  submitOrders = () => {
+  submitOrders = async() => {
     if (this.state.nome === "" || this.state.mesa === "") {
       swal({
         text: "Por favor, preencha o nome e o numero da mesa",
@@ -147,7 +147,7 @@ class Saloon extends Component {
         button: "Ok",
       });
     } else {
-      firebaseFunctions.db
+      await firebaseFunctions.db
         .collection("Orders")
         .doc()
         .set({

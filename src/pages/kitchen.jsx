@@ -47,13 +47,14 @@ export default function Kitchen() {
         });
         setTable(tableList)
       })
-    })
-    const updateOrder = (id) => {
-      firebaseFunctions.db.collection("Orders").doc(id).update({
+    },[])
+    const updateOrder = async(id) => {
+      await firebaseFunctions.db.collection("Orders").doc(id).update({
         hora_fim: firebaseFunctions.firestore.Timestamp.fromDate(new Date()),
         status: "pronto"
       
       })
+      return;
       }
     
     return (
