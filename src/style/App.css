@@ -9,10 +9,11 @@
 .headerSaloon {
     display: flex;
     justify-content: space-between;
+    height: 70px;
 }
 
 .logoSaloon {
-    width: 100px;
+    width: 80px;
 }
 
 .App {
@@ -36,8 +37,7 @@
 }
 
 .imgProntos {
-    width: 15%;
-    margin-bottom: 12px;
+    height: 20px;
 }
 
 .sub-title {
@@ -49,7 +49,7 @@
     background-image: url("../images/img1.jpg");
     width: 100vw;
     height: 100vh;
-    padding-top: 100px;
+    padding-top: 40px;
 }
 
 .inputLogin {
@@ -75,7 +75,7 @@
 }
 
 .register {
-    padding: 80px !important;
+    padding: 40px !important;
     background-color: rgba(92, 14, 92, 0.507);
     box-shadow: 5px 5px 1em #F8688B;
 }
@@ -152,9 +152,26 @@
         transform: rotate(360deg);
     }
 }
+@media only screen and (max-device-width: 980px) {
+    .cadastro {
+        width: 250px;
+    }
+    .logoSaloon {
+        width: 80px;
+    }
+}
 
 @media only screen and (max-device-width: 470px) {
     .cadastro {
         width: 250px;
+    }
+    .logoSaloon {
+        width: 70px;
+    }
+    .time{
+        font-size: 8px;
+    }
+    .headerSaloon {
+        margin-bottom: 20px;
     }
 }

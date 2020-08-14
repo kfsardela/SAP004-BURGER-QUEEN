@@ -7,10 +7,12 @@ class Card extends Component {
         const {mesa, horario, nome, pedido, tempo, button, textButton} = this.props;
         return (
             <div className="cardPedido">
-                <p className= "time">Feito em: {horario}</p>
-                {tempo?<p className= "time">Tempo de preparo: {tempo} min</p>:""}
+                <div className="dadosPedido">
                 <h4>Mesa: {mesa}</h4>
                 <p>Nome: {nome}</p>
+                <p >Feito às: {horario.substring(11)}</p>
+                {tempo?<p className= "time">Tempo de preparo: {tempo} min</p>:""}
+                </div>
                 <p className= "pedido">Pedido: {pedido}</p>
                 <BtnSaloon className="btnModal btnTest btnPronto" onClick={button} text={textButton}/>
             </div>

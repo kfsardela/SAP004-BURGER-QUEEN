@@ -172,13 +172,10 @@
 }
 
 @media only screen and (max-device-width: 900px) {
-    .logoSaloon {
-        width: 200px;
-    }
     .btnSaloon {
         height: 40px;
         margin: 20px;
-        width: 140px;
+        width: 120px;
     }
     .containerManha {
         height: 350px;
@@ -196,9 +193,6 @@
 }
 
 @media only screen and (max-device-width: 780px) {
-    .logoSaloon {
-        width: 100px;
-    }
     .containerManha {
         height: 250px;
         width: 350px;
@@ -226,19 +220,30 @@
         padding: 8px;
     }
 }
+@media only screen and (max-device-width: 700px) {
+    .imgMenu{
+        display: none;
+    }
+    .containerManha{
+        height: 150px;
+    }
+    .orderSummary {
+        font-size: 15px;
+        margin-top: 30px;
+    }
+    .inputSaloon{
+        height: 30px;
+        width: 120px;
+    }
+}
 
 @media only screen and (max-device-width: 470px) {
-    .logoSaloon {
-        width: 70px;
-    }
     .containerManha {
         height: 150px;
         width: 300px;
     }
-    .orderSummary {
+    .orderSummary{
         width: 300px;
-        font-size: 15px;
-        margin-top: 30px;
     }
     .tableOrder {
         padding: 4px;
@@ -269,5 +274,8 @@
     }
     .modalBurgers {
         left: 5%;
+    }
+    .btnModal {
+        font-size: 9px;
     }
 }
