@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+}
+
+.kitchen-main {
+    background-image: url("../images/img1.jpg");
+    color: #EBBD47;
+    height: 100vh;
+    text-align: center;
+    width: 100vw;
+}
+
+.cardPedido {
+    background-image: url(../images/moldura.png);
+    background-size: 100% 100%;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 400px;
+    margin: 0 auto;
+    padding-bottom: 90px;
+    padding-top: 80px;
+    text-align: initial;
+    width: 330px !important;
+}
+.dadosPedido{
+    margin: 10px auto;
+    margin-left: 80px; 
+}
+
+.pedido {
+    flex-grow: 1;
+    width: 178px;
+    margin: auto;
+    margin-left: 80px;
+    color: rgb(5, 34, 122);
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.btnPronto {
+    margin: auto !important;
+    width: auto;
+    height: auto;
+}
+
+.carrossel {
+    margin: 50px 50px;
+}
+.dadosPedido{
+    font-size: 14px;
+}
+.time{
+    font-size: 14px;
+}
+@media only screen and (max-device-width: 980px) {
+    .cardPedido {
+        height: 320px;
+        width: 250px !important;
+        padding-bottom: 70px;
+        padding-top: 60px;
+        font-size: 10px;
+    }
+    .pedido{
+        width: 130px;
+        margin-left: 60px;
+        font-size: 12px;
+    }
+    .dadosPedido{
+        margin-left: 60px;
+        font-size: 12px;
+        width: 130px;
+    }
+    .time{
+        font-size: 11px;
+    }
+}
+@media only screen and (max-device-width: 780px) {
+    .titleKitchen{
+        height: 20px;
+    }
+    .cardPedido {
+        height: 300px;
+        width: 250px !important;
+        padding-bottom: 60px;
+        padding-top: 50px;
+    }
+    .dadosPedido{
+        font-size: 12px;
+    }
+    .pedido{
+        margin-left: 60px;
+        width: 130px;
+    }
+    .time{
+        font-size: 10px;
+    }
+}
+@media only screen and (max-device-width: 460px) {
+    .cardPedido {
+        height: 250px;
+        width: 200px !important;
+        padding-bottom: 50px;
+        padding-top: 40px;
+        font-size: 10px;
+    }
+    .pedido {
+        width: 100px;
+        margin-left: 48px;
+        margin-right: 48px;
+        font-size: 10px;
+    }
+    .dadosPedido{
+        width: 100px;
+        margin: 10px auto;
+        margin-left: 50px; 
+        font-size: 8px;
+    }
+    .time{
+        width: 108px;
+        font-size: 9px;
+    }
+}

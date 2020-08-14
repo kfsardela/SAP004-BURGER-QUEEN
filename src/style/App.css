@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+}
+
+.titleRegister {
+    width: 400px;
+}
+
+.headerSaloon {
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+}
+
+.logoSaloon {
+    width: 80px;
+}
+
+.App {
+    text-align: center;
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+.welcome {
+    color: white;
+    margin-top: 100px !important;
+    width: 100% !important;
+}
+
+.imgLogo {
+    width: 100%;
+}
+
+.imgProntos {
+    height: 20px;
+}
+
+.sub-title {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.reg-img {
+    background-image: url("../images/img1.jpg");
+    width: 100vw;
+    height: 100vh;
+    padding-top: 40px;
+}
+
+.inputLogin {
+    background-color: white;
+    border-radius: 50px;
+    font-size: 15px;
+    height: 40px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.Reg-select {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    width: 100%;
+}
+
+.select-option {
+    background-color: white;
+    border-radius: 30px;
+    height: 30px;
+}
+
+.register {
+    padding: 40px !important;
+    background-color: rgba(92, 14, 92, 0.507);
+    box-shadow: 5px 5px 1em #F8688B;
+}
+
+.btn {
+    background-color: #F8688B !important;
+    border-radius: 50px !important;
+    width: 180px;
+    margin: 30px 0 !important;
+}
+
+.btn :target {
+    background-color: purple !important;
+}
+
+.btn-register {
+    background-color: #F8688B !important;
+    border-radius: 50px !important;
+    margin-top: 30px !important;
+}
+
+.link-login {
+    color: #EBBD47 !important;
+}
+
+.footer {
+    background: black;
+    color: rgb(115, 7, 125);
+    bottom: 0;
+    font-size: 17px;
+    font-weight: bold;
+    height: 30px;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+.fa-sign-out {
+    font-size: 25px !important;
+    padding: 20px;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media only screen and (max-device-width: 980px) {
+    .cadastro {
+        width: 250px;
+    }
+    .logoSaloon {
+        width: 80px;
+    }
+}
+
+@media only screen and (max-device-width: 470px) {
+    .titleRegister {
+        width: 250px;
+    }
+    .logoSaloon {
+        width: 70px;
+    }
+    .time {
+        font-size: 8px;
+    }
+    .headerSaloon {
+        margin-bottom: 20px;
+    }
+}

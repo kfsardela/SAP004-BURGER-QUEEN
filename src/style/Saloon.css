@@ -1,0 +1,299 @@
+* {
+    box-sizing: border-box;
+}
+
+.titleMenu {
+    width: 100%;
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.containerManha {
+    height: 540px;
+    overflow: auto;
+    width: 400px;
+    background-color: rgba(228, 22, 176, 0.384);
+    border-radius: 30px;
+}
+
+.modalBurgers {
+    background-image: url(../images/moldura.png);
+    background-size: 100% 100%;
+    height: 350px;
+    left: 30%;
+    padding: 60px;
+    position: fixed;
+    top: 30%;
+    width: 300px;
+}
+
+.teste {
+    background-color: lawngreen;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 0; }
+}
+
+.blink {
+  -webkit-animation: blink 1s linear infinite;
+  -moz-animation: blink 1s linear infinite;
+  -ms-animation: blink 1s linear infinite;
+  -o-animation: blink 1s linear infinite;
+  animation: blink 1s linear infinite;
+}
+
+.titleModal {
+    color: rgb(33, 33, 189);
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.menuModal {
+    font-weight: bold;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.btnModal {
+    background-color: #F8688B;
+    border-radius: 50px;
+    color: yellow;
+    font-size: 20px;
+    font-weight: bold;
+    width: auto;
+}
+
+.modalSpace {
+    margin: 5px;
+}
+
+.containerButtons {
+    display: flex;
+}
+
+.menuFlex {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.btnSaloon {
+    border-color: #e3f11c;
+    color: black;
+    box-shadow: 0 0 40px 40px #e3f11c inset, 0 0 0 0 #e3f11c;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+    height: 40px;
+    margin: 20px;
+    width: 160px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.btnSaloon:hover {
+    box-shadow: 0 0 10px 0 #e3f11c inset, 0 0 10px 4px #e3f11c;
+}
+
+.btnTest {
+    background-color: transparent;
+    border: 2px solid;
+    border-radius: 0.6em;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+}
+
+.btnTest:hover,
+.btnTest:focus {
+    color: #fff;
+    outline: 0;
+}
+
+.btnItems {
+    border-color: #3498db;
+    color: #fff;
+    box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.btnItems:hover {
+    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+}
+
+.containerOrder {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.inputSaloon {
+    border-radius: 15px;
+    height: 40px;
+    width: 120px;
+    margin-left: 15px;
+}
+
+.inputName {
+    width: 180px;
+}
+
+.tableOrder {
+    padding: 20px;
+    color: yellow;
+}
+
+.tableItems {
+    color: yellow;
+    margin: 10px;
+}
+
+.headerLogo {
+    width: 100px;
+}
+
+.fa-trash {
+    color: black;
+    font-size: 25px;
+    width: 100px;
+}
+
+.imgMenu {
+    width: 120px;
+    height: 100px;
+}
+
+.itemMenu {
+    width: 150px;
+}
+
+.orderSummary {
+    background-color: rgba(228, 22, 176, 0.384);
+    border-radius: 30px;
+    overflow: auto;
+    margin-top: 70px;
+    padding: 20px;
+    width: 450px;
+    height: 540px;
+}
+
+.btnOrders {
+    margin: auto;
+}
+
+@media only screen and (max-device-width: 900px) {
+    .btnSaloon {
+        height: 40px;
+        margin: 20px;
+        width: 120px;
+    }
+    .containerManha {
+        height: 350px;
+        width: 350px;
+    }
+    .orderSummary {
+        width: 400px;
+        padding: 10px;
+        margin-top: 80px;
+        height: 350px;
+    }
+    .tableOrder {
+        padding: 15px;
+    }
+}
+
+@media only screen and (max-device-width: 780px) {
+    .containerManha {
+        height: 250px;
+        width: 350px;
+    }
+    .orderSummary {
+        margin-top: 60px;
+        height: 250px;
+    }
+    .btnSaloon {
+        margin: 10px;
+    }
+    .imgMenu {
+        width: 100px;
+        height: 80px;
+    }
+    .btnItems {
+        width: 130px;
+        height: 35px;
+        font-size: 10px;
+    }
+    .orderSummary {
+        width: 350px;
+    }
+    .tableOrder {
+        padding: 8px;
+    }
+}
+@media only screen and (max-device-width: 700px) {
+    .imgMenu{
+        display: none;
+    }
+    .containerManha{
+        height: 150px;
+    }
+    .orderSummary {
+        font-size: 15px;
+        margin-top: 30px;
+    }
+    .inputSaloon{
+        height: 30px;
+        width: 120px;
+    }
+}
+
+@media only screen and (max-device-width: 470px) {
+    .containerManha {
+        height: 150px;
+        width: 300px;
+    }
+    .orderSummary{
+        width: 300px;
+    }
+    .tableOrder {
+        padding: 4px;
+    }
+    .btnSaloon {
+        height: 30px;
+        margin: 20px;
+        width: 100px;
+        font-size: 10px;
+    }
+    .imgMenu {
+        display: none;
+    }
+    .btnItems {
+        width: 100px;
+        height: 35px;
+        font-size: 10px;
+    }
+    .titleMenu {
+        font-size: 16px;
+    }
+    .menu {
+        width: 100px;
+    }
+    .fa-trash {
+        font-size: 15px;
+        width: 50px;
+    }
+    .modalBurgers {
+        left: 5%;
+    }
+    .btnModal {
+        font-size: 9px;
+    }
+}

@@ -1,6 +1,6 @@
-import React from 'react';
-import './App.css';
-import firebaseInit from './firebase'
+import React, { useState, useEffect } from 'react';
+import firebaseFunctions from "./firebase";
+import './style/App.css';
 import Login from './pages/login'
 import Kitchen from './pages/kitchen'
 import Register from './pages/register'
@@ -11,61 +11,47 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Redirect,
 } from "react-router-dom";
 
-
 export default function App() {
+  const [user, setUser] = useState([]);
+  const userLogged = () => {
+    firebaseFunctions.auth.onAuthStateChanged(user => {
+     if (user){
+      setUser(user);
+     }else{
+       setUser()
+     }
+    }
+    )}
+
+  useEffect(() => {
+    userLogged();
+  }, []);
+
   return (
     <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/login">Login</Link>
-            </li>
-            <li>
-              <Link to="/kitchen">Cozinha</Link>
-            </li>
-            <li>
-              <Link to="/register">Registro</Link>
-            </li>
-            <li>
-              <Link to="/saloon">Salão</Link>
-            </li>
-            <li>
-              <Link to="/orders">Pedidos prontos</Link>
-            </li>
-          </ul>
-        </nav>
-
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
-        <Switch>
-          <Route path="/login">
+              <Switch>
+          <Route path="/" exact={true}>
             <Login />
-          </Route>
-          <Route path="/kitchen">
-            <Kitchen />
           </Route>
           <Route path="/register">
             <Register />
+          </Route>
+{!user ? <Redirect to="/" />:(
+          <>
+          <Route path="/kitchen">
+            <Kitchen />
           </Route>
           <Route path="/saloon">
             <Saloon/>
           </Route>
           <Route path="/orders">
             <Orders/>
-          </Route>
-          
+            </Route>          
+          </>)}
         </Switch>
-      </div>
     </Router>
   );
 }
-
-
-        
-   
-
-
