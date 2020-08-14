@@ -6,7 +6,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../style/Kitchen.css";
 import Card from "../components/Card";
-import BtnSaloon from "../components/Btn-Saloon";
 
 export default function Kitchen() {
   const settings = {
@@ -88,7 +87,7 @@ export default function Kitchen() {
         ))}
       </Slider>
       <a href="/orders">
-      <BtnSaloon className="btnSaloon btnTest btnOrders" text="Pedidos Prontos"></BtnSaloon>
+        <button className="btnSaloon btnTest btnOrders">Pedidos prontos</button>
       </a>
     </main>
   );

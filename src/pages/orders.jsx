@@ -6,7 +6,6 @@ import "slick-carousel/slick/slick-theme.css";
 import "../style/Kitchen.css";
 import Card from "../components/Card";
 import Header from "../components/Header";
-import BtnSaloon from "../components/Btn-Saloon";
 
 export default function Orders() {
   const settings = {
@@ -92,7 +91,8 @@ export default function Orders() {
       </Slider>
 
       <a href= "javascript:history.back()">
-      <BtnSaloon className="btnSaloon btnTest" text="Voltar"></BtnSaloon>
+      
+        <button className="btnSaloon btnTest">Voltar</button>
       </a>
     </main>
   );

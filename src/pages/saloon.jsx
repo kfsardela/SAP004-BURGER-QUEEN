@@ -12,23 +12,23 @@ import ModalBurger from "../components/ModalBurger";
 import Header from "../components/Header";
 import swal from "sweetalert";
 
-const SubMenu = (props) => {
+ const SubMenu = (props) => {
   return (
     <ul className="menuFlex">
       <h3 className="titleMenu">{props.itens.titulo}</h3>
       {props.itens.conteudo.map((item, index) => (
         <MenuItem
-          onClick={() =>
-            item.descricao.includes("hambúrguer")
-              ? props.updateBurger(item.descricao, item.preco)
-              : props.updatePedido(item.descricao, item.preco)
-          }
-          key={index}
-          item={item.descricao}
-          valor={item.preco}
-          imagem={item.imagem}
+        onClick={() =>
+          item.descricao.includes("hambúrguer")
+          ? props.updateBurger(item.descricao, item.preco)
+          : props.updatePedido(item.descricao, item.preco)
+        }
+        key={index}
+        item={item.descricao}
+        valor={item.preco}
+        imagem={item.imagem}
         />
-      ))}
+        ))}
     </ul>
   );
 };
@@ -40,14 +40,29 @@ class Saloon extends Component {
     nome: "",
     mesa: 0,
   };
-
+  
   initialState = {
     pedido: [],
     total: 0,
     nome: "",
     mesa: 0,
   };
-
+  
+  listenerFirebase = () => {
+    firebaseFunctions.db
+    .collection("Orders")
+    .where('status', '==', 'pronto')
+    .onSnapshot(snapshot => {
+      snapshot.docChanges().forEach(change => {
+        if(!snapshot.size == 0) {
+          document.querySelector('.btnOrders').classList.add('blink');
+        }else {
+          document.querySelector('.btnOrders').classList.remove('blink');
+        }
+      })
+    });
+  }
+  
   selectMenu = (opcao) => {
     switch (opcao) {
       case "manha":
@@ -169,6 +184,8 @@ class Saloon extends Component {
   };
   
   render() {
+    this.listenerFirebase();
+
     return (
       <main className="kitchen-main">
         <Header isHome={false} />
