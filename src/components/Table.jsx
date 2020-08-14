@@ -43,7 +43,7 @@ const TableFoot = props => {
     );
 }
 
-class Tabela extends Component {
+class Table extends Component {
 
     render() {
         const { pedido, remove, total } = this.props;
@@ -59,4 +59,4 @@ class Tabela extends Component {
     }
 }
 
-export default Tabela;
+export default Table;

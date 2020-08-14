@@ -56,7 +56,7 @@ export default function Orders() {
     <main className="kitchen-main">
       <Header isHome={true} />
       <p>
-        <img alt="title4" className="imgProntos" src="./images/pedidos.png" />
+        <img alt="title4" className="imgProntos" src="./images/pedidosp.png" />
         <br></br>
         <img alt="title4" className="imgProntos" src="./images/prontos.png" />
       </p>

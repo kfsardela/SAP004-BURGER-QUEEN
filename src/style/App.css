@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 
-.cadastro {
+.titleRegister {
     width: 400px;
 }
 
@@ -30,14 +30,13 @@
     width: 100% !important;
 }
 
-.imagemLogo,
-.imagemTexto {
+.imgLogo {
     width: 100%;
 }
 
 .imgProntos {
-    width: 15%;
-    margin-bottom: 12px;
+    width: 20%;
+    margin-bottom: 2px;
 }
 
 .sub-title {
@@ -105,7 +104,7 @@
     background: black;
     color: rgb(115, 7, 125);
     bottom: 0;
-    font-size: 20px;
+    font-size: 17px;
     font-weight: bold;
     height: 30px;
     position: fixed;
@@ -139,11 +138,6 @@
     padding: 20px;
 }
 
-.fa-home {
-    font-size: 25px !important;
-    padding: 20px;
-}
-
 @keyframes App-logo-spin {
     from {
         transform: rotate(0deg);
@@ -154,7 +148,7 @@
 }
 
 @media only screen and (max-device-width: 470px) {
-    .cadastro {
+    .titleRegister {
         width: 250px;
     }
 }

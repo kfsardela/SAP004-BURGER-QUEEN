@@ -5,7 +5,7 @@ import "../style/reset.css";
 import MenuItem from "../components/MenuItem";
 import CafeManha from "../Json/CafeDaManha.json";
 import AlmocoJantar from "../Json/AlmocoJantar.json";
-import Tabela from "../components/Tabela";
+import Table from "../components/Table";
 import BtnSaloon from "../components/Btn-Saloon";
 import Input from "../components/Input";
 import ModalBurger from "../components/ModalBurger";
@@ -208,7 +208,7 @@ class Saloon extends Component {
               className="inputSaloon inputName"
               onChange={(e) => this.setState({ nome: e.target.value })}
             />
-            <Tabela
+            <Table
               pedido={this.state.pedido}
               remove={this.remove}
               total={this.state.total}
