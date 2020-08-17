@@ -49,15 +49,15 @@ class Saloon extends Component {
   };
   
   listenerFirebase = () => {
-    firebaseFunctions.db
+     firebaseFunctions.db
     .collection("Orders")
     .where('status', '==', 'pronto')
     .onSnapshot(snapshot => {
       snapshot.docChanges().forEach(change => {
         if(!snapshot.size == 0) {
-          document.querySelector('.btnOrders').classList.add('blink');
+          this.setState({blinkButton: "blink"});
         }else {
-          document.querySelector('.btnOrders').classList.remove('blink');
+          document.setState({blinkButton: ""});
         }
       })
     });
@@ -236,7 +236,7 @@ class Saloon extends Component {
               onClick={this.submitOrders}
             />
             <a href="/orders">
-            <BtnSaloon className="btnSaloon btnTest btnOrders" text="Pedidos Prontos"></BtnSaloon>
+            <BtnSaloon className={`btnSaloon btnTest btnOrders ${this.state.blinkButton}`}text="Pedidos Prontos"></BtnSaloon>
             </a>
           </div>
         </section>
