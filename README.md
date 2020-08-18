@@ -57,12 +57,43 @@ Durante o desenvolvimento do projeto, fizemos os testes de usabilidades com usu�
 ## 6. Interface
 A interface foi desenvolvida com design responsivo, simples e intuitivo, usando como  tema a série de TV "Friends".
 
+## 7. Instalação e ferramentas utilizadas 
 
-## 7. Considerações técnicas
+### Instalação
+
+- Clone esse repositório na sua máquina executando o seguinte comando no seu terminal:
+
+```sh
+git clone (link-do-repositório)
+```
+
+- Instale as dependências do projeto com o comando:
+
+```sh
+npm install
+```
+
+- Execute o projeto na sua máquina com:
+
+```sh
+npm start
+```
+- Visualize o projeto no seu navegador com o link:
+
+```sh
+http://localhost:3000
+```
+
+## 8. Considerações técnicas
 
 Ferramentas utilizadas no projeto:
 
 * HTML, CSS, JavaScript, React.js, React Hooks,React Router, Node.js, Npm, Firebase, Material UI, Figma, Git e GitHub.
+
+## 9. Implementações futuras
+
+- Histórico de pedidos.
+- Testes.
 
 ## Autoras
 
