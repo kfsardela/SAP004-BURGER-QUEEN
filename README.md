@@ -55,14 +55,45 @@ Marque os pedidos que foram entregues.
 Durante o desenvolvimento do projeto, fizemos os testes de usabilidades com usuários, que nos retornaram feedbacks muito importantes para a melhoria do projeto, várias sugestões foram implementadas, possibilitando uma melhor experiência para o usuário.
 
 ## 6. Interface
-A interface foi desenvolvida com design responsivo, simples e intuitivo, usando como  tema a série de TV "Friends".
+A interface foi desenvolvida com design responsivo, simples e intuitivo. Inicialmente criamos nosso protótipo com o tema neon, depois pensamos em utilizar como tema a série de TV "Friends". Com essas duas ideias em mente, resolvemos unir os dois temas e assim surgiu a interface "Friends Burger", [Clique aqui](https://burger-queen-sap004.web.app/) e veja o resultado final.
 
+## 7. Instalação
 
-## 7. Considerações técnicas
+### Instalação
+
+- Clone esse repositório na sua máquina executando o seguinte comando no seu terminal:
+
+```sh
+git clone (link-do-repositório)
+```
+
+- Instale as dependências do projeto com o comando:
+
+```sh
+npm install
+```
+
+- Execute o projeto na sua máquina com:
+
+```sh
+npm start
+```
+- Visualize o projeto no seu navegador com o link:
+
+```sh
+http://localhost:3000
+```
+
+## 8. Considerações técnicas
 
 Ferramentas utilizadas no projeto:
 
 * HTML, CSS, JavaScript, React.js, React Hooks,React Router, Node.js, Npm, Firebase, Material UI, Figma, Git e GitHub.
+
+## 9. Implementações futuras
+
+- Histórico de pedidos.
+- Testes.
 
 ## Autoras
 

@@ -11,7 +11,7 @@ class Card extends Component {
                 <h4>Mesa: {mesa}</h4>
                 <p>Nome: {nome}</p>
                 <p >Feito às: {horario.substring(11)}</p>
-                {tempo?<p className= "time">Tempo de preparo: {tempo} min</p>:""}
+                <p className= "time">Tempo de preparo: {tempo} min</p>
                 </div>
                 <p className= "pedido">Pedido: {pedido}</p>
                 <BtnSaloon className="btnModal btnTest btnPronto" onClick={button} text={textButton}/>
