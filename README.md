@@ -57,7 +57,7 @@ Durante o desenvolvimento do projeto, fizemos os testes de usabilidades com usu�
 ## 6. Interface
 A interface foi desenvolvida com design responsivo, simples e intuitivo, usando como  tema a série de TV "Friends".
 
-## 7. Instalação e ferramentas utilizadas 
+## 7. Instalação
 
 ### Instalação
 
