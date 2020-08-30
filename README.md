@@ -1,5 +1,17 @@
 # Friends Burger
 
+## Índice
+
+* [1. Definição de Produto](#1-definição-de-produto)
+* [2. Usuário](#2-usuário)
+* [3. Funcionalidades](#3-funcionalidades)
+* [4. Protótipo](#4-protótipo)
+* [5. Testes de usabilidade](#5-testes-de-usabilidade)
+* [6. Interface](#6-interface)
+* [7. Instalação do projeto](#7-Instalação-do-projeto)
+* [8. Considerações técnicas](#8-considerações-técnicas)
+* [9. Implementações Futuras](#9-Implementações-Futuras)
+* [Autoras](#Autoras)
 
 ## 1. Definição do produto
 Friends Burger é uma plataforma desenvolvida para uma pequena hamburgueria que está crescendo e necessita de uma interface em que se possa realizar pedidos utilizando um tablet, e enviá-los para a cozinha para que sejam preparados de forma ordenada e eficiente.
@@ -33,7 +45,7 @@ Ver a lista de pedidos prontos para servir;
 Marque os pedidos que foram entregues.
 
 
-## 4. Protótipo de baixa fidelidade 
+## 4. Protótipo 
   * Pagina de Login:
 
   <img src="./public/images/figma_login.png" alt="" width="500px">
@@ -57,32 +69,53 @@ Durante o desenvolvimento do projeto, fizemos os testes de usabilidades com usu�
 ## 6. Interface
 A interface foi desenvolvida com design responsivo, simples e intuitivo. Inicialmente criamos nosso protótipo com o tema neon, depois pensamos em utilizar como tema a série de TV "Friends". Com essas duas ideias em mente, resolvemos unir os dois temas e assim surgiu a interface "Friends Burger", [Clique aqui](https://burger-queen-sap004.web.app/) e veja o resultado final.
 
-## 7. Instalação
 
-### Instalação
+## 7. Instalação do projeto
 
-- Clone esse repositório na sua máquina executando o seguinte comando no seu terminal:
+Caso deseje baixar o projeto para sua máquina, é possível fazer um fork desse repositório, e em segida clonar em sua máquina executando o seguinte comando no seu terminal:
 
 ```sh
 git clone (link-do-repositório)
 ```
 
-- Instale as dependências do projeto com o comando:
+Caso não possua o Node.js instalado, basta clicar nesse link [aqui](https://nodejs.org/pt-br/download/) e fazer o download, pois, para executar ele em seu computador, será necessário realizar a instalação da pasta node modules, com o uso do NPM (nativo do Node.js).
+
+Assim que a instalação tiver sido concluída, basta digitar em seu terminal:
 
 ```sh
 npm install
 ```
+Se ainda não possui uma conta no Firebase, você deve criar uma e um projeto novo onde ficará seu banco de dados.
 
-- Execute o projeto na sua máquina com:
-
-```sh
-npm start
-```
-- Visualize o projeto no seu navegador com o link:
+Para instalar o Firebase, utilize o comando:
 
 ```sh
-http://localhost:3000
+npm install -g firebase-tools
 ```
+
+Para conectar sua máquina local a sua conta no Firebase é necessário fazer o login, digitando o seguinte comando em seu terminal:
+
+```sh
+firebase login
+```
+Inicialize seu projeto utilizando o comando:
+
+  ```sh
+  firebase init
+  ```
+
+Para abrir um servidor a fim de executar o projeto em seu navegador, é só digitar:
+  
+  ```sh
+  firebase serve
+  ```
+
+Para realizar um deploy, utilize o seguinte comando:
+
+```sh
+firebase deploy
+```
+
 
 ## 8. Considerações técnicas
 
@@ -93,7 +126,9 @@ Ferramentas utilizadas no projeto:
 ## 9. Implementações futuras
 
 - Histórico de pedidos.
-- Testes.
+- Implementação de Testes.
+- Refatoração do código.
+- Novos testes de usabilidade para futuras melhorias.
 
 ## Autoras
 
