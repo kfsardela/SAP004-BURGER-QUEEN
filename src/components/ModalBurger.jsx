@@ -61,7 +61,7 @@ class ModalBurger extends Component {
                     const textoFinal = this.atualizaDescricao(item);
                     const valorFinal = this.atualizaPreco(valor);
                     updatePedido(textoFinal, valorFinal);
-                    var container = ReactDOM.findDOMNode(this).parentNode;
+                    let container = ReactDOM.findDOMNode(this).parentNode;
                     ReactDOM.unmountComponentAtNode(container);
                 }}></BtnSaloon>
             </div>
